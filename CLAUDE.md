@@ -31,6 +31,8 @@ referencia/
   metodologia_correcao.md     roteiro de correção (destilado do TG UFPE)
   tg_ufpe_metodologia.txt     paper-fonte (prompt-driven, 100% adjacent agreement)
   repertorio.md               banco de repertório legítimo por categoria
+  calibracao_humildade.md     travas anti-inflação + confiança alta rara
+  calibrador_total.md         regras empíricas para calibrar a nota central
   temas/lista_temas.md        151 temas + categorias
   redacoes_nota_1000/         exemplos comentados (2021–2025)
 scripts/

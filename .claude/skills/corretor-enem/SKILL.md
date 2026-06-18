@@ -17,6 +17,7 @@ calibração com exemplos reais) validada no TG UFPE.
 - `referencia/metodologia_correcao.md` — roteiro de sub-análises por competência + calibração.
 - `referencia/repertorio.md` — banco de repertório legítimo por categoria (checar autenticidade + sugerir).
 - `referencia/calibracao_humildade.md` — travas anti-inflação, confiança alta rara, faixas prováveis; consultar antes de fechar central/faixa/confiança.
+- `referencia/calibrador_total.md` — regras empíricas para ajustar a **nota central** a partir da soma bruta C1–C5 e flags do texto.
 - `referencia/redacoes_nota_1000/` — exemplos comentados (2021–2025) como padrão-ouro.
 - `dataset/corpus.db` — **banco SQLite com 11.147 redações reais** já corrigidas por humanos (Essay-BR base + extended), com nota por competência e índice full-text. Memória empírica de calibração (pré-2025 — ver drift).
 - `scripts/amostra.py` — consulta o `corpus.db` (faixa, nível, tema, busca full-text, `--escala`).
@@ -111,9 +112,17 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      tem prova textual suficiente.
    - Registrar no laudo se o sanity-check corrigiu inflação ou punição excessiva.
 
-5. **Definir faixa provável e confiança (calibração de humildade).** Consultar
+5. **Calibrar a nota central.** A soma C1–C5 é a **nota bruta**, não a nota final.
+   Antes de fechar, consultar `referencia/calibrador_total.md`, marcar as flags
+   aplicáveis (texto_curto, paragrafo_unico, repertorio_generico,
+   proposta_incompleta, argumentacao_generica, coesao_basica, c1_recorrente,
+   risco_superestimacao) e aplicar ajuste empírico (-XX/+XX/0). Exibir no laudo:
+   `Nota bruta`, `Calibração da central`, `ajuste aplicado`, `motivo` e `nota
+   central calibrada`. A nota exibida no topo é a **central calibrada**.
+
+6. **Definir faixa provável e confiança (calibração de humildade).** Consultar
    `referencia/calibracao_humildade.md` antes de fechar. Não tentar vender nota
-   exata: usar a soma C1–C5 como **nota central estimada** e comunicar incerteza.
+   exata: usar a nota central calibrada e comunicar incerteza.
    - **Confiança padrão = média.**
    - **Confiança alta é rara** e só pode ser usada se TODAS as condições forem
      satisfeitas: tema informado; texto completo; estrutura ENEM nítida; C1 sem
@@ -139,7 +148,7 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      880+, exigir C5 completa operacional, C1 forte, C4 funcional, dois
      desenvolvimentos suficientes. 920+ só padrão-ouro, sem leitura generosa.
 
-6. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
+7. **Calibrar com exemplos** consultando o banco `corpus.db` (uso normal; NÃO usar durante validação cega):
    ```
    python3 scripts/amostra.py --faixa <lo>-<hi> --n 2     # faixa do total estimado
    python3 scripts/amostra.py --escala --comp 4           # régua 0→200 da competência
@@ -151,7 +160,7 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    sugere (típico em C2/C4/C5), **seguir 2025** e anotar a divergência. Para o
    teto, `--escala` ou `--faixa 1000-1000`.
 
-7. **Fechar a nota central estimada, faixa provável, confiança e relatório** no formato abaixo.
+8. **Fechar a nota central calibrada, faixa provável, confiança e relatório** no formato abaixo.
 
 ## Formato de saída
 
@@ -178,6 +187,14 @@ Confiança: baixa/média/alta
 | C3 — Projeto de texto        | XXX | XXX–XXX | <motivo curto> |
 | C4 — Coesão                  | XXX | XXX–XXX | <motivo curto> |
 | C5 — Proposta de intervenção | XXX | XXX–XXX | <motivo curto> |
+
+## Nota bruta
+Soma inicial C1–C5: XXX
+
+## Calibração da central
+Ajuste aplicado: -XX / +XX / 0
+Motivo do ajuste: <regra de calibrador_total.md + evidência>
+Nota central calibrada: XXX
 
 ## Diagnóstico principal
 <1–3 frases: maior gargalo de nota + maior força do texto>

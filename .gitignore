@@ -8,8 +8,10 @@ redacoes/*.md
 dataset/corpus.db
 
 # validação gerada
-validacao/
+validacao/*
 !validacao/.gitkeep
+!validacao/historico_validacoes.jsonl
+!validacao/calibracao_total.md
 
 # PDFs INEP (texto extraído .txt é versionado; PDF não)
 referencia/manuais_inep/*.pdf
