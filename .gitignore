@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+redacoes/*.txt
+redacoes/*.md
+!redacoes/.gitkeep
+
+# DB regenerável via scripts/build_db.py
+dataset/corpus.db
+
+# validação gerada
+validacao/
+!validacao/.gitkeep
+
+# PDFs INEP (texto extraído .txt é versionado; PDF não)
+referencia/manuais_inep/*.pdf

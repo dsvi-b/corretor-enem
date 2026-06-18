@@ -1,0 +1,168 @@
+# Temas ENEM — Essay-BR Extended
+
+151 temas. Nº = redações disponíveis no corpus por tema.
+Textos motivadores completos: `dataset/extended/extended-corpus/prompts.csv` (coluna description).
+
+## Por categoria
+- sociedade e cultura: 61
+- saúde: 19
+- educação: 16
+- segurança: 15
+- política: 15
+- meio ambiente: 12
+- ciência e tecnologia: 7
+- economia: 6
+
+## Lista (mais redações primeiro)
+
+- (151) O que podemos aprender com a prática esportiva? — *saúde*
+- (148) Porte de armas pela população civil — *segurança*
+- (127) Automedicação – devemos realmente combatê-la? — *saúde*
+- (121) Analfabetismo funcional no Brasil: por que esse problema ainda persiste? — *educação*
+- (121) Debate sobre o marco temporal — *sociedade e cultura*
+- (120) Coronavírus: a importância da ciência para a sociedade — *saúde*
+- (120) Gravidez precoce: um problema? — *sociedade e cultura*
+- (120) A cultura da erotização infantil — *sociedade e cultura*
+- (119) Desafios na Educação a Distância no Brasil — *educação*
+- (119) Autismo: Desafios para a inclusão — *sociedade e cultura*
+- (118) A cultura do cancelamento nas redes sociais — *sociedade e cultura*
+- (118) Privatização do saneamento básico — *sociedade e cultura*
+- (118) SUS: desafios e importância da saúde pública no Brasil — *saúde*
+- (118) O papel dos influenciadores digitais — *sociedade e cultura*
+- (118) A importância das vacinas para a sociedade — *saúde*
+- (117) Abuso de autoridade no Brasil — *sociedade e cultura*
+- (117) Impactos do uso das redes sociais na saúde mental — *saúde*
+- (117) Preconceito amarelo — *sociedade e cultura*
+- (117) Parto humanizado: uma questão de saúde pública — *saúde*
+- (115) Conscientização da população para o isolamento social em meio a crise financeira — *sociedade e cultura*
+- (115) Efeitos do negacionismo científico na sociedade — *sociedade e cultura*
+- (113) "Let Her Run": uma mulher tem que provar que é realmente mulher? — *ciência e tecnologia*
+- (113) Como combater a transfobia no Brasil — *sociedade e cultura*
+- (112) Desmatamento e queimadas: a importância de preservar a floresta amazônica — *meio ambiente*
+- (110) Reforma do Ensino Médio - uma solução ou um problema para a questão da educação no país? — *educação*
+- (109) A importância de valorizar e garantir os direitos dos povos indígenas no Brasil — *sociedade e cultura*
+- (106) O estigma associado a doenças mentais na sociedade brasileira — *saúde*
+- (105) Fome: um retrato da desigualdade social no Brasil — *economia*
+- (100) Como reverter o cenário da atual situação carcerária do Brasil? — *segurança*
+- (97) O discurso de ódio nas redes sociais — *sociedade e cultura*
+- (95) Quais as soluções para os impactos ambientais resultantes da ação de grandes corporações? — *meio ambiente*
+- (92) Projeto de lei de iniciativa popular — *política*
+- (91) Caminhos para superar os desafios encontrados pelos negros atualmente — *sociedade e cultura*
+- (90) Como combater o aumento das DSTs entre os jovens brasileiros? — *saúde*
+- (86) Caminhos para combater a intolerância religiosa no Brasil — *sociedade e cultura*
+- (83) Reforma da Previdência: uma solução ou um problema? — *sociedade e cultura*
+- (82) Equidade de gênero no Brasil: um desafio? — *sociedade e cultura*
+- (78) O suicídio entre os jovens: como resolver esse problema? — *saúde*
+- (77) Feminicídio no Brasil: um debate importante sobre a violência contra a mulher — *segurança*
+- (77) O livre porte de armas no Brasil: avanço ou retrocesso? — *sociedade e cultura*
+- (72) O uso de agrotóxicos no Brasil — *meio ambiente*
+- (70) Informação e sociedade: o combate às fake news em ano de eleições presidenciais — *sociedade e cultura*
+- (63) Democratização do acesso ao cinema no Brasil — *sociedade e cultura*
+- (61) Educação sexual na escola — *educação*
+- (56) Por que valorizar o patrimônio histórico? — *sociedade e cultura*
+- (54) Caminhos para melhorar o sistema carcerário brasileiro — *segurança*
+- (41) A criminalidade entre os jovens no Brasil: como resolver esse problema? — *segurança*
+- (34) Caminhos para combater o racismo no Brasil — *sociedade e cultura*
+- (33) Homofobia: um debate contemporâneo importante — *sociedade e cultura*
+- (22) Suicídio entre policiais: um problema que mata mais que confrontos na rua — *saúde*
+- (22) Manipulação do comportamento do usuário pelo controle de dados na internet — *ciência e tecnologia*
+- (20) Carnaval e apropriação cultural — *sociedade e cultura*
+- (20) Qualificação e o futuro do emprego — *economia*
+- (20) Supremo Tribunal Federal e opinião pública — *política*
+- (20) Ciência, tecnologia e superação dos limites humanos — *ciência e tecnologia*
+- (20) Um réu deve ou não ser preso após a condenação em 2ª. instância? — *sociedade e cultura*
+- (20) Agrotóxicos ou defensivos agrícolas: dois nomes e uma polêmica — *meio ambiente*
+- (20) Preservação da Amazônia: Desafio brasileiro ou internacional? — *meio ambiente*
+- (20) A ciência na era da pós-verdade — *sociedade e cultura*
+- (20) Universidade em crise: quem paga a conta? — *educação*
+- (20) O que é mais importante para vencer na vida? — *sociedade e cultura*
+- (20) Os ursos polares da Rússia e um dilema ecológico — *meio ambiente*
+- (20) Cantar ou não cantar o hino nacional? Eis a questão... — *educação*
+- (20) Posse de armas: mais segurança ou mais perigo? — *segurança*
+- (20) O Brasil e os imigrantes no mundo contemporâneo — *sociedade e cultura*
+- (20) Epidemia alimentar: sobrepeso e obesidade — *saúde*
+- (20) A onda conservadora e o Brasil nos próximos anos — *política*
+- (20) Direitos humanos: em defesa de quem? — *sociedade e cultura*
+- (20) Por que os jovens querem deixar o Brasil? — *sociedade e cultura*
+- (20) O Brasil paralisado: o que você pensa sobre a greve dos caminhoneiros? — *política*
+- (20) O direito ao foro privilegiado — *política*
+- (20) Forma física, corpo perfeito e consumismo — *saúde*
+- (20) Biografias: personagens e autores em confronto — *sociedade e cultura*
+- (20) vlido simplificar a linguagem de um clssico? — *educação*
+- (20) Experincias com animais e violncia em manifestaes — *sociedade e cultura*
+- (20) Forma fsica, corpo perfeito e consumismo — *sociedade e cultura*
+- (20) H limites para a liberdade de expresso? — *sociedade e cultura*
+- (20) Lixo: questo de cidadania e responsabilidade social — *meio ambiente*
+- (20) O conceito de famlia pode ou no pode mudar? — *sociedade e cultura*
+- (20) O papel do Estado na vida do cidado e das naes — *política*
+- (20) Terrorismo: o Brasil tem razes para tem-lo? — *segurança*
+- (19) Criptomoeda: tecnologia e revolução econômica — *economia*
+- (19) Redes sociais e manipulação política — *política*
+- (19) Política X Ciência: a "pílula do câncer" — *ciência e tecnologia*
+- (19) Impeachment: a presidente deve perder o mandato? — *política*
+- (19) Disciplina, ordem e autoridade favorecem a educação? — *educação*
+- (19) O sucesso vem da escola ou do esforço individual? — *educação*
+- (19) gua: aprenderemos com a atual crise hdrica? — *meio ambiente*
+- (19) Automedicao: por que a prtica  to comum entre os jovens? — *saúde*
+- (19) Bicicletas e ciclofaixas esto chegando para ficar? — *sociedade e cultura*
+- (19) Como se tornar um consumidor consciente? Isso  possvel? — *sociedade e cultura*
+- (19) "Cultura do estupro": a culpa  da vtima? — *sociedade e cultura*
+- (19) Eutansia: quem decide a hora certa de morrer? — *sociedade e cultura*
+- (19) Maconha: manter proibio, legalizar, descriminalizar? — *sociedade e cultura*
+- (19) O horrio de propaganda eleitoral  til para o eleitor? — *política*
+- (19) O que muda no pas aps as manifestaes populares? — *política*
+- (19) Organismos transgnicos: fonte de problemas ou de solues? — *ciência e tecnologia*
+- (19) Racismo: como virar de vez essa triste pgina da histria? — *sociedade e cultura*
+- (18) Patrimônio histórico e cultural brasileiro: um caso de descaso — *sociedade e cultura*
+- (18) Informação no rótulo de produtos transgênicos — *meio ambiente*
+- (18) Internação compulsória de dependentes de crack — *saúde*
+- (18) A polcia se excede contra os manifestantes ou cumpre seu papel? — *segurança*
+- (18) Intolerncia religiosa: regra ou exceo no Brasil? — *sociedade e cultura*
+- (18) Meia-entrada: Voc  contra ou a favor? Por qu? — *sociedade e cultura*
+- (18) O voto nulo  um ato poltico vlido? — *política*
+- (18) Qual  o limite entre o trote e o crime? — *segurança*
+- (18) Violncia escolar: expor o problema e sugerir solues — *educação*
+- (17) Violência e drogas: o papel do usuário — *segurança*
+- (17) A influência dos meios de comunicação na sociedade brasileira — *sociedade e cultura*
+- (17) Os desafios dos povos indígenas no Brasil — *sociedade e cultura*
+- (17) Horrio poltico obrigatrio: bom para quem? — *política*
+- (17) Qual o papel da mulher na sociedade brasileira atual? — *sociedade e cultura*
+- (17) Qual ser o legado da Copa do Mundo para o Brasil? — *economia*
+- (16) A terapia de reversão da orientação sexual — *sociedade e cultura*
+- (16) Como melhorar a educação, sem valorizar o professor? — *educação*
+- (16) Brasileiros têm "péssima educação argumentativa", segundo cientista — *sociedade e cultura*
+- (16) Por que não há novas manifestações nas ruas? — *política*
+- (16) Perigos do universo digital — *ciência e tecnologia*
+- (16) Terceirização: avanço ou retrocesso? — *economia*
+- (16) Direitos em conflito: liberdade de expressão e intimidade — *sociedade e cultura*
+- (16) Artes e educação física: opcionais ou obrigatórias? — *educação*
+- (16) Você faz parte da turma do "eu me acho?" — *sociedade e cultura*
+- (16) Escravizar é humano? — *sociedade e cultura*
+- (16) Estupro: como prevenir esse crime? — *segurança*
+- (16) A Aids no  mais a mesma? Por que diminuiu o medo da doena? — *saúde*
+- (16) A quem cabe a responsabilidade sobre a escolha alimentar da populao? — *saúde*
+- (16) Deve-se reduzir a maioridade penal no Brasil? — *segurança*
+- (16) Qual a importncia, para o Brasil e para o mundo, da crise financeira dos pases da zona do euro? — *economia*
+- (15) Escola no Brasil: com partido ou sem partido? — *educação*
+- (15) A sociedade est perdendo a batalha contra o crime? — *segurança*
+- (15) Deve ou no haver maior controle sobre o consumo do lcool? — *saúde*
+- (15) Os efeitos da covardia e da coragem sobre a sociedade — *sociedade e cultura*
+- (15) Por que a ideia de fim do mundo atrai e assusta? — *sociedade e cultura*
+- (15) Viagem sem volta a Marte: pioneirismo ou alucinao? — *ciência e tecnologia*
+- (14) Como resolver o problema da criminalidade infantil em nossa sociedade? — *segurança*
+- (14) O Brasil e o conflito: defesa do meio ambiente X desenvolvimento econmico — *meio ambiente*
+- (13) Por que causas o jovem tem se mobilizado atualmente no Brasil? — *política*
+- (13) Qual a relao entre o estudo e uma carreira profissional bem sucedida? — *educação*
+- (12) O MMA  um esporte como outros ou injustificada glorificao da violncia? — *sociedade e cultura*
+- (11) Norma culta X variantes lingusticas: qual deve ser a posio da escola? — *educação*
+- (9) Um cachorro vale mais do que um ser humano? — *sociedade e cultura*
+- (9) possvel prevenir massacres como o da escola de Realengo? — *segurança*
+- (9) Enchentes: o excesso de chuvas  o nico responsvel pelo desastre? — *meio ambiente*
+- (9) O Supremo Tribunal Federal fez bem em legalizar o aborto de anencfalos? — *saúde*
+- (8) A questo do lixo nas sociedades de consumo — *meio ambiente*
+- (8) Cotas para universidades federais: soluo ou problema? — *educação*
+- (8) A virgindade  um valor moral a ser preservado? — *sociedade e cultura*
+- (7) O conflito entre geraes e a convivncia social — *sociedade e cultura*
+- (6) A sociedade brasileira e os conflitos no trnsito — *sociedade e cultura*
+- (6) Justia x Vingana: como no confundir as duas coisas? — *sociedade e cultura*
+- (6) Reforma poltica no Brasil: qual o melhor modelo de votao? — *política*
