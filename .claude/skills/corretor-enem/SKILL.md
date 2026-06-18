@@ -35,10 +35,30 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    o indicado pelo usuário) ou colada na conversa. Pegar também o **tema** — se
    não informado, perguntar OU inferir do conteúdo e confirmar.
 
-2. **Triagem de anulação.** Antes de pontuar: fuga ao tema? não é
-   dissertativo-argumentativo? ≤ 7 linhas? identificação no texto? Se sim,
-   sinalizar e tratar conforme a cartilha (não inventar nota cheia). Cópia dos
-   motivadores não zera, mas os trechos copiados são desconsiderados.
+2. **GATE DE ANULAÇÃO (bloqueante — antes de qualquer nota).** Verificar cada
+   hipótese oficial de anulação (cartilha 2025 item 4 + `regras_por_ano.md`).
+   **Não pontuar competências enquanto este gate não passar.**
+   - **Fuga total ao tema** — o assunto do texto corresponde ao **tema dado**?
+     O tema dado é **soberano**: se o texto trata de outro assunto, é fuga = 0,
+     **por melhor que seja escrito**. NUNCA corrigir pelo mérito quando foge ao
+     tema. (Foi exatamente o erro da validação: redação ótima sobre outro tema.)
+   - **Não atende ao tipo dissertativo-argumentativo** (predomínio de narração,
+     descrição, poema, carta, etc.).
+   - **Texto insuficiente** — conforme a **regra oficial do ENEM**: até 7 linhas.
+     Trechos copiados dos motivadores são **desconsiderados** na contagem (podem
+     derrubar pra insuficiente). Não inventar limite próprio (ex: "<15 linhas").
+   - **Texto desconexo / ininteligível** — não permite leitura/compreensão.
+   - **Parte deliberadamente desconectada** do tema, identificação no espaço do
+     texto, ou outra hipótese de anulação prevista na cartilha do ano.
+
+   Se cair em QUALQUER hipótese, **parar aqui** e emitir SÓ:
+   ```
+   Nota: 0
+   Motivo da anulação: <hipótese exata>
+   Evidências no texto: <trechos literais>
+   O que deveria ter sido feito: <o caminho correto>
+   ```
+   Senão, seguir pra correção por competências.
 
 3. **Corrigir competência por competência**, na ordem C1→C5, seguindo a cadeia
    de sub-análises de `metodologia_correcao.md`. Para cada uma:
@@ -51,6 +71,12 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    - **C5**: contar explicitamente os 5 elementos (ação, agente, modo/meio,
      efeito, detalhamento); cuidado com agente nulo. Em 2025, **sem *ação*
      explícita não passa de 80**.
+   - **Calibração do piso (0–400) — sem nota de consolo.** Redação muito fraca
+     leva nota baixa de verdade. Texto curto que NÃO anula ainda assim é
+     penalizado por desenvolvimento raso. Puxar pra baixo (faixa 0–400) quando
+     houver vários de: **tese ausente**, **argumentação embrionária**,
+     **repertório solto**, **proposta incompleta**, **coesão mínima**. Não dar
+     ~360 automático a redação rasa — vários desses sinais juntos = ~80–240.
 
 4. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
    ```
@@ -67,6 +93,11 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
 5. **Fechar nota e escrever o relatório** no formato abaixo.
 
 ## Formato de saída
+
+**Se anulada no gate (passo 2):** emitir apenas o bloco `Nota: 0 / Motivo /
+Evidências / O que deveria ter sido feito` — não usar a tabela abaixo.
+
+**Se passou no gate:**
 
 ```
 # Correção — <tema>
