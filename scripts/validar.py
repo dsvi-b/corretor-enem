@@ -158,13 +158,25 @@ def score(args):
               "| Confiança | n | captura | largura média |",
               "|---|---:|---:|---:|"]
         for conf in ("alta", "média", "media", "baixa"):
-            ks = [(th, f) for _, th, _, f in com_faixa if f["confianca"] == conf]
+            ks = [(th, tm, f) for _, th, tm, f in com_faixa if f["confianca"] == conf]
             if not ks:
                 continue
-            capt = sum(f["min"] <= th <= f["max"] for th, f in ks)
-            larg = sum(f["max"] - f["min"] for _, f in ks) / len(ks)
+            capt = sum(f["min"] <= th <= f["max"] for th, _, f in ks)
+            larg = sum(f["max"] - f["min"] for _, _, f in ks) / len(ks)
             rotulo = "média" if conf == "media" else conf
             L.append(f"| {rotulo} | {len(ks)} | {100*capt/len(ks):.0f}% | {larg:.0f} |")
+        centrais_altas = [(th, tm) for _, th, tm, _ in com_faixa if tm >= 800]
+        confianca_alta = [(eid, th, tm, f) for eid, th, tm, f in com_faixa if f["confianca"] == "alta"]
+        L += ["", "### Humildade da nota",
+              f"Casos com confiança alta: **{len(confianca_alta)}**",
+              f"Viés médio dos casos com central >=800: **{(sum(tm-th for th,tm in centrais_altas)/len(centrais_altas)):+.0f}**" if centrais_altas else "Viés médio dos casos com central >=800: **n/a**",
+              f"Viés médio dos casos com confiança alta: **{(sum(tm-th for _,th,tm,_ in confianca_alta)/len(confianca_alta)):+.0f}**" if confianca_alta else "Viés médio dos casos com confiança alta: **n/a**"]
+        falhas_alta = [(eid, th, tm, f) for eid, th, tm, f in confianca_alta if not (f["min"] <= th <= f["max"])]
+        if falhas_alta:
+            L += ["", "### Casos em que confiança alta falhou",
+                  "| id | humano | central | faixa |", "|---|---:|---:|---|"]
+            for eid, th, tm, f in falhas_alta:
+                L.append(f"| {eid} | {th} | {tm} | {f['min']}–{f['max']} |")
         falhas_faixa = [(eid, th, tm, f) for eid, th, tm, f in com_faixa if not (f["min"] <= th <= f["max"])]
         if falhas_faixa:
             L += ["", "### Casos em que a faixa não capturou a nota humana",

@@ -16,6 +16,7 @@ calibração com exemplos reais) validada no TG UFPE.
 - `referencia/manuais_inep/cartilha_2025.txt` — fonte primária INEP (Cartilha do Participante 2025).
 - `referencia/metodologia_correcao.md` — roteiro de sub-análises por competência + calibração.
 - `referencia/repertorio.md` — banco de repertório legítimo por categoria (checar autenticidade + sugerir).
+- `referencia/calibracao_humildade.md` — travas anti-inflação, confiança alta rara, faixas prováveis; consultar antes de fechar central/faixa/confiança.
 - `referencia/redacoes_nota_1000/` — exemplos comentados (2021–2025) como padrão-ouro.
 - `dataset/corpus.db` — **banco SQLite com 11.147 redações reais** já corrigidas por humanos (Essay-BR base + extended), com nota por competência e índice full-text. Memória empírica de calibração (pré-2025 — ver drift).
 - `scripts/amostra.py` — consulta o `corpus.db` (faixa, nível, tema, busca full-text, `--escala`).
@@ -110,20 +111,33 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      tem prova textual suficiente.
    - Registrar no laudo se o sanity-check corrigiu inflação ou punição excessiva.
 
-5. **Definir faixa provável e confiança.** Não tentar vender nota exata: usar a
-   soma C1–C5 como **nota central estimada** e comunicar incerteza.
-   - **Confiança alta** → faixa ±80: tema claro; texto completo; estrutura ENEM
-     reconhecível; evidências por competência consistentes; sem conflito forte
-     entre competências.
-   - **Confiança média** → faixa ±120: alguns trechos ambíguos; redação
-     mediana/fraca; C2/C3/C5 dependem de interpretação; total pode variar por
-     efeito de banca.
-   - **Confiança baixa** → faixa ±160 ou ±200: tema não claro; texto muito curto;
-     repertório duvidoso; argumentação confusa; risco de fuga/tangenciamento; nota
-     central sensível a poucos trechos. Use ±200 quando houver 2+ desses sinais.
-   - Limitar faixa a 0–1000. Ex.: central 560, confiança média → 440–680.
+5. **Definir faixa provável e confiança (calibração de humildade).** Consultar
+   `referencia/calibracao_humildade.md` antes de fechar. Não tentar vender nota
+   exata: usar a soma C1–C5 como **nota central estimada** e comunicar incerteza.
+   - **Confiança padrão = média.**
+   - **Confiança alta é rara** e só pode ser usada se TODAS as condições forem
+     satisfeitas: tema informado; texto completo; estrutura ENEM nítida; C1 sem
+     padrão recorrente de erro; C2 com repertório legítimo/produtivo; C3 com
+     projeto claro e desenvolvimento consistente; C4 variada e funcional; C5
+     completa; nenhuma competência depende de interpretação generosa; nenhuma
+     evidência fraca. Se faltar qualquer item, NÃO usar alta.
+   - **Confiança média**: caso padrão; há alguma ambiguidade ou variação provável
+     de banca, mas o texto é avaliável com segurança razoável.
+   - **Confiança baixa**: tema pouco claro, texto muito curto, repertório duvidoso,
+     argumentação confusa, risco de fuga/tangenciamento, ou nota central muito
+     sensível a poucos trechos.
+   - Faixas: **alta ±100**, **média ±160**, **baixa ±240**, limitadas a 0–1000.
    - Por competência, faixa provável padrão = nota central ±40 (alta), ±80
      (média/baixa), limitada a 0–200.
+   - **Trava 760/640:** se houver 2+ sinais de superficialidade (argumentação
+     genérica, repertório pouco articulado, tese previsível, proposta genérica,
+     coesão básica, desenvolvimento curto, períodos vagos, pouca causa/consequência),
+     central não passa de 760 sem justificativa forte; com 3+ sinais, não passa de
+     640 sem justificativa muito forte.
+   - **Trava 800/880/920:** texto bonito/organizado não é automaticamente 880+.
+     Para 800+, exigir repertório produtivo, C3 consistente e C5 não genérica. Para
+     880+, exigir C5 completa operacional, C1 forte, C4 funcional, dois
+     desenvolvimentos suficientes. 920+ só padrão-ouro, sem leitura generosa.
 
 6. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
    ```
@@ -197,6 +211,9 @@ modelo e explicar em 1–2 linhas o que mudou e por que sobe de nível>
 
 ## Sanity-check do total
 <informar se houve ajuste: "corrigiu inflação", "corrigiu punição excessiva" ou "sem ajuste"; citar qual competência mudou e a evidência>
+
+## Checagem de superestimação
+<obrigatória se central 800+: responder: por que não seria apenas 680–760? o que justifica passar de 800? há competência avaliada com generosidade? Se a resposta for fraca, baixar central ou confiança antes de fechar.>
 
 ## Como subir de faixa
 <3–5 ações concretas e priorizadas — o que daria mais pontos primeiro>
