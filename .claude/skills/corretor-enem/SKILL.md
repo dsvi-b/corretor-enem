@@ -110,7 +110,22 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      tem prova textual suficiente.
    - Registrar no laudo se o sanity-check corrigiu inflação ou punição excessiva.
 
-5. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
+5. **Definir faixa provável e confiança.** Não tentar vender nota exata: usar a
+   soma C1–C5 como **nota central estimada** e comunicar incerteza.
+   - **Confiança alta** → faixa ±80: tema claro; texto completo; estrutura ENEM
+     reconhecível; evidências por competência consistentes; sem conflito forte
+     entre competências.
+   - **Confiança média** → faixa ±120: alguns trechos ambíguos; redação
+     mediana/fraca; C2/C3/C5 dependem de interpretação; total pode variar por
+     efeito de banca.
+   - **Confiança baixa** → faixa ±160 ou ±200: tema não claro; texto muito curto;
+     repertório duvidoso; argumentação confusa; risco de fuga/tangenciamento; nota
+     central sensível a poucos trechos. Use ±200 quando houver 2+ desses sinais.
+   - Limitar faixa a 0–1000. Ex.: central 560, confiança média → 440–680.
+   - Por competência, faixa provável padrão = nota central ±40 (alta), ±80
+     (média/baixa), limitada a 0–200.
+
+6. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
    ```
    python3 scripts/amostra.py --faixa <lo>-<hi> --n 2     # faixa do total estimado
    python3 scripts/amostra.py --escala --comp 4           # régua 0→200 da competência
@@ -122,7 +137,7 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    sugere (típico em C2/C4/C5), **seguir 2025** e anotar a divergência. Para o
    teto, `--escala` ou `--faixa 1000-1000`.
 
-6. **Fechar a nota pedagógica estimada e escrever o relatório** no formato abaixo.
+7. **Fechar a nota central estimada, faixa provável, confiança e relatório** no formato abaixo.
 
 ## Formato de saída
 
@@ -138,14 +153,20 @@ tabela abaixo.
 Modo: treino
 Regra aplicada: ENEM <ano vigente> (ver regras_por_ano.md)
 
-| Competência | Nota |
-|-------------|------|
-| C1 — Norma padrão            | XXX |
-| C2 — Tema/tipo textual       | XXX |
-| C3 — Projeto de texto        | XXX |
-| C4 — Coesão                  | XXX |
-| C5 — Proposta de intervenção | XXX |
-| **Nota pedagógica estimada** | **XXXX** |
+Nota central estimada: XXX/1000
+Faixa provável: XXX–XXX
+Confiança: baixa/média/alta
+
+| Competência | Nota central | Faixa provável | Principal motivo |
+| ----------- | ------------ | -------------- | ---------------- |
+| C1 — Norma padrão            | XXX | XXX–XXX | <motivo curto> |
+| C2 — Tema/tipo textual       | XXX | XXX–XXX | <motivo curto> |
+| C3 — Projeto de texto        | XXX | XXX–XXX | <motivo curto> |
+| C4 — Coesão                  | XXX | XXX–XXX | <motivo curto> |
+| C5 — Proposta de intervenção | XXX | XXX–XXX | <motivo curto> |
+
+## Diagnóstico principal
+<1–3 frases: maior gargalo de nota + maior força do texto>
 
 ## C1 — Norma padrão (XXX)
 <justificativa do nível, com trechos citados e desvios apontados>
@@ -170,7 +191,7 @@ Elementos: ação [✓/✗] · agente [✓/✗] · modo/meio [✓/✗] · efeito
   [rep: fonte]           repertório usado (C2)
   {C5-ação|agente|meio|efeito|detalhe: trecho}  elementos da proposta>
 
-## Reescrita modelo
+## Trecho reescrito
 <pegar a competência de MENOR nota; reescrever o trecho mais problemático como
 modelo e explicar em 1–2 linhas o que mudou e por que sobe de nível>
 
@@ -179,6 +200,9 @@ modelo e explicar em 1–2 linhas o que mudou e por que sobe de nível>
 
 ## Como subir de faixa
 <3–5 ações concretas e priorizadas — o que daria mais pontos primeiro>
+
+## Plano de treino para a próxima redação
+<2–4 exercícios concretos para praticar antes da próxima redação>
 
 ## Calibração
 Comparada com N redações reais do Essay-BR (faixa <x>). Drift pré-2025: <se houve

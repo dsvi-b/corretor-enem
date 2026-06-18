@@ -61,7 +61,10 @@ def prepare(args):
             f"Tema: {theme or '(sem título)'}\n\n{text}\n", encoding="utf-8")
         gabarito[str(eid)] = {"theme": theme, "source": source,
                               "c1": c1, "c2": c2, "c3": c3, "c4": c4, "c5": c5, "score": score}
-        respostas[str(eid)] = {"c1": None, "c2": None, "c3": None, "c4": None, "c5": None}
+        respostas[str(eid)] = {
+            "c1": None, "c2": None, "c3": None, "c4": None, "c5": None,
+            "total_min": None, "total_max": None, "confianca": None,
+        }
     con.close()
     GABARITO.write_text(json.dumps(gabarito, ensure_ascii=False, indent=2), encoding="utf-8")
     RESPOSTAS.write_text(json.dumps(respostas, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -77,7 +80,7 @@ def score(args):
     resp = json.loads(RESPOSTAS.read_text(encoding="utf-8"))
 
     comps = ["c1", "c2", "c3", "c4", "c5"]
-    pares = []  # (id, {comp: (humano, meu)}, total_humano, total_meu)
+    pares = []  # (id, {comp: (humano, meu)}, total_humano, total_meu, faixa_info)
     ruidosos = []  # (id, motivo, score_humano, score_meu)
     for eid, meu in resp.items():
         if eid not in gab or any(meu[c] is None for c in comps):
@@ -96,8 +99,15 @@ def score(args):
         if motivo:
             ruidosos.append((eid, motivo, th, tm))
             continue
+        faixa = None
+        if all(meu.get(k) is not None for k in ("total_min", "total_max", "confianca")):
+            faixa = {
+                "min": int(meu["total_min"]),
+                "max": int(meu["total_max"]),
+                "confianca": str(meu["confianca"]).lower(),
+            }
         d = {c: (gab[eid][c], meu[c]) for c in comps}
-        pares.append((eid, d, th, tm))
+        pares.append((eid, d, th, tm, faixa))
 
     if not pares:
         sys.exit("Nenhuma resposta preenchida em respostas.json.")
@@ -117,7 +127,7 @@ def score(args):
     pea = {c: 0 for c in comps}; paa = {c: 0 for c in comps}
     vies = {c: 0 for c in comps}
     pea_t = paa_t = vies_t = 0
-    for _, d, th, tm in pares:
+    for _, d, th, tm, _ in pares:
         for c in comps:
             h, m = d[c]
             if h == m:
@@ -136,10 +146,38 @@ def score(args):
     L.append("| Viés médio | " + " | ".join(f"{vies[c]/n:+.0f}" for c in comps) + f" | {vies_t/n:+.0f} |")
     L += ["", "Viés médio = (minha nota − humana). Positivo = eu inflo; negativo = eu deflaciono.", ""]
 
+    com_faixa = [(eid, th, tm, faixa) for eid, _, th, tm, faixa in pares if faixa]
+    falhas_faixa = []
+    if com_faixa:
+        cap = sum(f["min"] <= th <= f["max"] for _, th, _, f in com_faixa)
+        largura_media = sum(f["max"] - f["min"] for _, _, _, f in com_faixa) / len(com_faixa)
+        L += ["## Captura pela faixa provável", "",
+              f"Casos com faixa: **{len(com_faixa)}**",
+              f"Taxa de captura: **{100*cap/len(com_faixa):.0f}%**",
+              f"Largura média da faixa: **{largura_media:.0f} pontos**", "",
+              "| Confiança | n | captura | largura média |",
+              "|---|---:|---:|---:|"]
+        for conf in ("alta", "média", "media", "baixa"):
+            ks = [(th, f) for _, th, _, f in com_faixa if f["confianca"] == conf]
+            if not ks:
+                continue
+            capt = sum(f["min"] <= th <= f["max"] for th, f in ks)
+            larg = sum(f["max"] - f["min"] for _, f in ks) / len(ks)
+            rotulo = "média" if conf == "media" else conf
+            L.append(f"| {rotulo} | {len(ks)} | {100*capt/len(ks):.0f}% | {larg:.0f} |")
+        falhas_faixa = [(eid, th, tm, f) for eid, th, tm, f in com_faixa if not (f["min"] <= th <= f["max"])]
+        if falhas_faixa:
+            L += ["", "### Casos em que a faixa não capturou a nota humana",
+                  "| id | humano | central | faixa | confiança |",
+                  "|---|---:|---:|---|---|"]
+            for eid, th, tm, f in sorted(falhas_faixa, key=lambda x: abs(x[1]-x[2]), reverse=True):
+                L.append(f"| {eid} | {th} | {tm} | {f['min']}–{f['max']} | {f['confianca']} |")
+        L.append("")
+
     L.append("## Por redação")
     L.append("| id | tema | humano | meu | Δtotal |")
     L.append("|---|---|---|---|---|")
-    for eid, d, th, tm in sorted(pares, key=lambda x: abs(x[3] - x[2]), reverse=True):
+    for eid, d, th, tm, faixa in sorted(pares, key=lambda x: abs(x[3] - x[2]), reverse=True):
         tema = (gab[eid]["theme"] or "")[:40]
         L.append(f"| {eid} | {tema} | {th} | {tm} | {tm-th:+d} |")
 
