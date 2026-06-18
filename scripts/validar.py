@@ -78,20 +78,36 @@ def score(args):
 
     comps = ["c1", "c2", "c3", "c4", "c5"]
     pares = []  # (id, {comp: (humano, meu)}, total_humano, total_meu)
+    ruidosos = []  # (id, motivo, score_humano, score_meu)
     for eid, meu in resp.items():
         if eid not in gab or any(meu[c] is None for c in comps):
             continue
-        d = {c: (gab[eid][c], meu[c]) for c in comps}
         th = gab[eid]["score"]
         tm = sum(meu[c] for c in comps)
+        cega = CEGAS / f"{eid}.txt"
+        bruto = cega.read_text(encoding="utf-8") if cega.exists() else ""
+        corpo = bruto.split("\n\n", 1)[1].strip() if "\n\n" in bruto else bruto.strip()
+        motivo = None
+        if args.clean:
+            if len(corpo) == 0 and th != 0:
+                motivo = "texto vazio com nota humana diferente de zero"
+            elif th == 0 and len(corpo) > 400:
+                motivo = "score 0 com texto completo — rótulo suspeito"
+        if motivo:
+            ruidosos.append((eid, motivo, th, tm))
+            continue
+        d = {c: (gab[eid][c], meu[c]) for c in comps}
         pares.append((eid, d, th, tm))
 
     if not pares:
         sys.exit("Nenhuma resposta preenchida em respostas.json.")
 
     n = len(pares)
-    L = ["# Relatório de validação", "",
+    titulo = "# Relatório de validação (clean)" if args.clean else "# Relatório de validação"
+    L = [titulo, "",
          f"Redações avaliadas: **{n}**  |  Adjacência: ±80/competência, ±100 total", ""]
+    if args.clean:
+        L += [f"Casos ruidosos separados: **{len(ruidosos)}**", ""]
     L += ["| Métrica | C1 | C2 | C3 | C4 | C5 | Total |",
           "|---|---|---|---|---|---|---|"]
 
@@ -127,6 +143,12 @@ def score(args):
         tema = (gab[eid]["theme"] or "")[:40]
         L.append(f"| {eid} | {tema} | {th} | {tm} | {tm-th:+d} |")
 
+    if args.clean:
+        L += ["", "## Dados ruidosos separados (não entram nas métricas)",
+              "| id | motivo | humano | meu |", "|---|---|---|---|"]
+        for eid, motivo, th, tm in ruidosos:
+            L.append(f"| {eid} | {motivo} | {th} | {tm} |")
+
     RELATORIO.write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"OK: {RELATORIO.relative_to(RAIZ)} ({n} redações)", file=sys.stderr)
     print(f"PAA total: {pct(paa_t)} | viés total médio: {vies_t/n:+.0f}", file=sys.stderr)
@@ -140,6 +162,7 @@ def main():
     pp.add_argument("--seed", type=int, default=1)
     pp.set_defaults(func=prepare)
     ps = sub.add_parser("score", help="compara respostas vs gabarito")
+    ps.add_argument("--clean", action="store_true", help="separa casos ruidosos do corpus antes de calcular métricas")
     ps.set_defaults(func=score)
     args = p.parse_args()
     args.func(args)

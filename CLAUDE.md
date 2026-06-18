@@ -8,8 +8,11 @@ ENEM nas 5 competências, rodando no Claude Code (sem API externa, sem ML).
 1. Soltar a redação em `redacoes/` (`.txt`/`.md`) ou colar na conversa.
 2. Disparar a skill `corretor-enem` (ex: "corrige essa redação", "que nota tira
    nisso", "vê minha redação sobre <tema>").
-3. Receber nota por competência (0–200), total (0–1000), justificativa com
-   trechos citados e plano de melhoria.
+3. Receber **nota pedagógica estimada** por competência (0–200), total
+   (0–1000), justificativa com trechos citados e plano de melhoria.
+
+Modo padrão = **treino**: mesmo com risco de anulação, o corretor alerta e
+corrige pedagogicamente. **Modo banca** só quando pedido explicitamente.
 
 Informar o **tema** junto. Sem tema, é inferido e confirmado.
 

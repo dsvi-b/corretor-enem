@@ -35,50 +35,82 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    o indicado pelo usuário) ou colada na conversa. Pegar também o **tema** — se
    não informado, perguntar OU inferir do conteúdo e confirmar.
 
-2. **GATE DE ANULAÇÃO (bloqueante — antes de qualquer nota).** Verificar cada
-   hipótese oficial de anulação (cartilha 2025 item 4 + `regras_por_ano.md`).
-   **Não pontuar competências enquanto este gate não passar.**
+2. **Modo de correção.** Padrão = `modo_treino`.
+   - `modo_treino` (padrão): **não para por anulação**. Se houver fuga ao tema,
+     tipo inadequado, texto insuficiente, desconexão/ininteligibilidade,
+     identificação ou outra hipótese grave, criar bloco **Alerta de risco** e
+     corrigir normalmente C1–C5. A nota final se chama **nota pedagógica
+     estimada**.
+   - `modo_banca`: usar **apenas se o usuário pedir explicitamente**. Nesse modo,
+     o gate é bloqueante; se cair em anulação oficial, parar e emitir só nota 0.
+
+   Em ambos os modos, verificar antes:
    - **Fuga total ao tema** — o assunto do texto corresponde ao **tema dado**?
-     O tema dado é **soberano**: se o texto trata de outro assunto, é fuga = 0,
-     **por melhor que seja escrito**. NUNCA corrigir pelo mérito quando foge ao
-     tema. (Foi exatamente o erro da validação: redação ótima sobre outro tema.)
+     Tema dado é soberano. Em treino, alertar; em banca, zerar.
    - **Não atende ao tipo dissertativo-argumentativo** (predomínio de narração,
      descrição, poema, carta, etc.).
-   - **Texto insuficiente** — conforme a **regra oficial do ENEM**: até 7 linhas.
-     Trechos copiados dos motivadores são **desconsiderados** na contagem (podem
-     derrubar pra insuficiente). Não inventar limite próprio (ex: "<15 linhas").
+   - **Texto insuficiente** — regra oficial: até 7 linhas. Trechos copiados dos
+     motivadores são desconsiderados. Não inventar limite próprio (ex: "<15
+     linhas"). Texto curto acima de 7 linhas pode ser penalizado, não zerado.
    - **Texto desconexo / ininteligível** — não permite leitura/compreensão.
-   - **Parte deliberadamente desconectada** do tema, identificação no espaço do
-     texto, ou outra hipótese de anulação prevista na cartilha do ano.
+   - **Parte deliberadamente desconectada**, identificação no espaço do texto, ou
+     outra hipótese de anulação prevista na cartilha do ano.
 
-   Se cair em QUALQUER hipótese, **parar aqui** e emitir SÓ:
+   Saída em `modo_treino` quando houver risco:
+   ```
+   ## Alerta de risco
+   Risco: <hipótese>
+   Evidências no texto: <trechos literais>
+   Efeito provável em banca: <pode zerar / derruba competências>
+   O que deveria ter sido feito: <caminho correto>
+   ```
+
+   Saída em `modo_banca` se anulada:
    ```
    Nota: 0
    Motivo da anulação: <hipótese exata>
    Evidências no texto: <trechos literais>
    O que deveria ter sido feito: <o caminho correto>
    ```
-   Senão, seguir pra correção por competências.
 
 3. **Corrigir competência por competência**, na ordem C1→C5, seguindo a cadeia
    de sub-análises de `metodologia_correcao.md`. Para cada uma:
    - Pensar passo a passo (chain-of-thought) sobre os critérios.
    - Citar **trechos literais** da redação como evidência.
    - Atribuir **um dos 6 níveis** (0/40/80/120/160/200) — nunca intermediário.
+   - **Regra anti-halo:** separar julgamento global e julgamento específico.
+     Boa tese **não** sobe automaticamente C1/C4/C5. Erros gramaticais **não**
+     derrubam automaticamente C2/C3/C5. Cada competência precisa de evidência
+     própria no texto.
+   - **C1**: pesar mais **padrão recorrente** de norma-padrão (acentuação,
+     concordância, regência, pontuação, grafia) que aparece várias vezes. Erro
+     isolado/typo não derruba muito; reincidência sim.
    - **C2**: checar se o repertório é **legítimo** (conferir em `repertorio.md`
      ou `amostra.py --busca`) e **articulado**; genérico/inventado derruba (e em
      2025 penaliza 2 competências).
    - **C5**: contar explicitamente os 5 elementos (ação, agente, modo/meio,
      efeito, detalhamento); cuidado com agente nulo. Em 2025, **sem *ação*
      explícita não passa de 80**.
-   - **Calibração do piso (0–400) — sem nota de consolo.** Redação muito fraca
-     leva nota baixa de verdade. Texto curto que NÃO anula ainda assim é
-     penalizado por desenvolvimento raso. Puxar pra baixo (faixa 0–400) quando
-     houver vários de: **tese ausente**, **argumentação embrionária**,
-     **repertório solto**, **proposta incompleta**, **coesão mínima**. Não dar
-     ~360 automático a redação rasa — vários desses sinais juntos = ~80–240.
+   - **Calibração do piso (0–400) — sem nota de consolo, sem zerar em treino.**
+     Redação muito fraca leva nota pedagógica baixa de verdade. Texto curto que
+     NÃO anula ainda assim é penalizado por desenvolvimento raso. Puxar pra baixo
+     (faixa 0–400) quando houver vários de: **tese ausente/confusa**,
+     **argumentação embrionária**, **repertório solto**, **proposta incompleta**,
+     **coesão mínima**, **desenvolvimento muito curto**. Não dar ~360 automático
+     a redação rasa — vários desses sinais juntos = ~80–240.
 
-4. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
+4. **Sanity-check do total (reduzir variância sem piorar competência).** Depois
+   de atribuir C1–C5, revisar a soma final antes de fechar:
+   - Se **3+ competências** foram empurradas pra cima pela mesma impressão geral
+     (ex: texto parece "bom"), revisar pra evitar inflação.
+   - Se **3+ competências** foram empurradas pra baixo por uma impressão geral
+     ruim (ex: muitos erros gramaticais), revisar pra evitar punição em cascata.
+   - Perguntar: "cada competência tem evidência própria?" Se não, ajustar.
+   - Não mexer por estética geral; mexer só quando a nota de uma competência não
+     tem prova textual suficiente.
+   - Registrar no laudo se o sanity-check corrigiu inflação ou punição excessiva.
+
+5. **Calibrar** consultando o banco `corpus.db` (11.147 redações reais):
    ```
    python3 scripts/amostra.py --faixa <lo>-<hi> --n 2     # faixa do total estimado
    python3 scripts/amostra.py --escala --comp 4           # régua 0→200 da competência
@@ -90,17 +122,20 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    sugere (típico em C2/C4/C5), **seguir 2025** e anotar a divergência. Para o
    teto, `--escala` ou `--faixa 1000-1000`.
 
-5. **Fechar nota e escrever o relatório** no formato abaixo.
+6. **Fechar a nota pedagógica estimada e escrever o relatório** no formato abaixo.
 
 ## Formato de saída
 
-**Se anulada no gate (passo 2):** emitir apenas o bloco `Nota: 0 / Motivo /
-Evidências / O que deveria ter sido feito` — não usar a tabela abaixo.
+**Modo treino (padrão):** sempre usar a tabela abaixo. Se houver risco de
+anulação, inserir antes dela o bloco `## Alerta de risco`; não parar a correção.
 
-**Se passou no gate:**
+**Modo banca (só se pedido explicitamente):** se anulada no gate, emitir apenas
+`Nota: 0 / Motivo / Evidências / O que deveria ter sido feito` — não usar a
+tabela abaixo.
 
 ```
 # Correção — <tema>
+Modo: treino
 Regra aplicada: ENEM <ano vigente> (ver regras_por_ano.md)
 
 | Competência | Nota |
@@ -110,7 +145,7 @@ Regra aplicada: ENEM <ano vigente> (ver regras_por_ano.md)
 | C3 — Projeto de texto        | XXX |
 | C4 — Coesão                  | XXX |
 | C5 — Proposta de intervenção | XXX |
-| **TOTAL**                    | **XXXX** |
+| **Nota pedagógica estimada** | **XXXX** |
 
 ## C1 — Norma padrão (XXX)
 <justificativa do nível, com trechos citados e desvios apontados>
@@ -138,6 +173,9 @@ Elementos: ação [✓/✗] · agente [✓/✗] · modo/meio [✓/✗] · efeito
 ## Reescrita modelo
 <pegar a competência de MENOR nota; reescrever o trecho mais problemático como
 modelo e explicar em 1–2 linhas o que mudou e por que sobe de nível>
+
+## Sanity-check do total
+<informar se houve ajuste: "corrigiu inflação", "corrigiu punição excessiva" ou "sem ajuste"; citar qual competência mudou e a evidência>
 
 ## Como subir de faixa
 <3–5 ações concretas e priorizadas — o que daria mais pontos primeiro>
