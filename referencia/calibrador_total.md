@@ -68,6 +68,53 @@ Se `nota_bruta <= 520`, mas o texto tem tese clara, 2 argumentos reconhecíveis 
 proposta com pelo menos 3 elementos, pode aumentar **+40**. Não subir acima de
 600 sem repertório produtivo.
 
+## Regras finas por competência (auditoria de extremos)
+
+Estas regras corrigem **a soma bruta** ajustando a leitura das competências —
+**não** criam teto bruto automático. Ver `auditoria_extremos.md` para os casos.
+Aplicar na atribuição C1–C5, antes de somar.
+
+### F1) C5 fraca afeta só C5
+Proposta fraca/incompleta/ausente penaliza **C5**. **Não** derruba C2/C3/C4
+automaticamente. (3107/3079: humano deu C2/C3/C4 = 160–200 com proposta não
+canônica; eu derrubei tudo por halo reverso.)
+
+### F2) C2/C3 fortes com C5 fraca → manter C2/C3
+Se C2/C3 têm evidência textual própria (dado, exemplo nomeado, causa→efeito,
+repertório explicado), **manter** mesmo com C5 baixa. Registrar no laudo: "C5
+baixa não rebaixou C2/C3 — prova própria". Julgar C2/C3/C4 **antes** de olhar a
+proposta.
+
+### F3) Texto rebuscado exige prova de progressão antes de C3 alto
+Vocabulário formal não sobe C3. Só dar **C3 >= 120** se houver tese → argumento
+com causa/consequência **concreta** → fechamento. Sem progressão real, C3 <= 80
+mesmo com parágrafos bem formatados. (7064/110/6645: humano deu C3 = 0.)
+
+### F4) Repertório só citado não sobe C2/C3
+Nome de filósofo/lei/pesquisa **sem explicar a conexão material** com o tema é
+decorativo: C2 não passa de 120. Aparência culta ≠ repertório produtivo.
+
+### F5) Linguagem formal + pouca análise → limitar C3
+Se há período formal mas pouca análise (só afirma, não explica), **limitar C3**.
+Teste: "apagando conectivos e palavras difíceis, ainda sobra argumento?" Se não,
+baixar C3 (e C4).
+
+### F6) Conectivo presente não garante C4
+Conectivo formal sobre frases que não progridem = coesão protocolar → **C4
+baixa/zero**. Avaliar encadeamento referencial real, não a presença do conectivo.
+(110: humano deu C4 = 0 apesar de "Em uma segunda análise / Conclui-se".)
+
+### F7) Proposta fraca só derruba C3 se o desenvolvimento não tiver projeto
+Penalizar **C5** pela proposta. Só baixar **C3** se a falta de proposta vier
+junto de desenvolvimento sem projeto (sem tese sustentada, sem causa/consequência)
+— problema no **desenvolvimento**, não na conclusão.
+
+### F8) Drift de C5 do corpus (não é acerto humano)
+Corpus é pré-2025. Vários textos receberam C5 = 160–200 **sem** os 5 elementos
+exigidos hoje. Ao comparar e ver C5 alto sem proposta canônica, marcar **"drift
+de corpus"** no laudo. **Para uso ENEM atual, seguir a cartilha 2025**: sem
+*ação* explícita C5 não passa de 80.
+
 ## Sinais práticos das flags
 
 - `texto_curto`: 1–2 parágrafos ou desenvolvimento insuficiente para sustentar

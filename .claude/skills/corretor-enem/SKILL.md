@@ -18,6 +18,7 @@ calibração com exemplos reais) validada no TG UFPE.
 - `referencia/repertorio.md` — banco de repertório legítimo por categoria (checar autenticidade + sugerir).
 - `referencia/calibracao_humildade.md` — travas anti-inflação, confiança alta rara, faixas prováveis; consultar antes de fechar central/faixa/confiança.
 - `referencia/calibrador_total.md` — regras empíricas para ajustar a **nota central** a partir da soma bruta C1–C5 e flags do texto.
+- `referencia/auditoria_extremos.md` — auditoria dos erros extremos: por que o corretor infla texto rebuscado vazio (creditar C3/C4 por forma) e deflaciona argumento forte/proposta fraca (halo reverso + drift de C5). Consultar antes de fechar a calibração.
 - `referencia/redacoes_nota_1000/` — exemplos comentados (2021–2025) como padrão-ouro.
 - `dataset/corpus.db` — **banco SQLite com 11.147 redações reais** já corrigidas por humanos (Essay-BR base + extended), com nota por competência e índice full-text. Memória empírica de calibração (pré-2025 — ver drift).
 - `scripts/amostra.py` — consulta o `corpus.db` (faixa, nível, tema, busca full-text, `--escala`).
@@ -113,10 +114,12 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    - Registrar no laudo se o sanity-check corrigiu inflação ou punição excessiva.
 
 5. **Calibrar a nota central.** A soma C1–C5 é a **nota bruta**, não a nota final.
-   Antes de fechar, consultar `referencia/calibrador_total.md`, marcar as flags
-   aplicáveis (texto_curto, paragrafo_unico, repertorio_generico,
-   proposta_incompleta, argumentacao_generica, coesao_basica, c1_recorrente,
-   risco_superestimacao) e aplicar ajuste empírico (-XX/+XX/0). Exibir no laudo:
+   Antes de fechar, consultar `referencia/calibrador_total.md` **e
+   `referencia/auditoria_extremos.md`** (regras finas F1–F8: não derrubar C2/C3
+   por C5 fraca; não creditar C3/C4 por forma/conectivo; marcar drift de C5 do
+   corpus), marcar as flags aplicáveis (texto_curto, paragrafo_unico,
+   repertorio_generico, proposta_incompleta, argumentacao_generica, coesao_basica,
+   c1_recorrente, risco_superestimacao) e aplicar ajuste empírico (-XX/+XX/0). Exibir no laudo:
    `Nota bruta`, `Calibração da central`, `ajuste aplicado`, `motivo` e `nota
    central calibrada`. A nota exibida no topo é a **central calibrada**.
 
