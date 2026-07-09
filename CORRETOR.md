@@ -1,9 +1,3 @@
-<!-- GERADO por scripts/sync_shims.py a partir de CORRETOR.md. Nao editar a mao -- edite CORRETOR.md e re-rode. -->
----
-name: corretor-enem
-description: Corrige redação dissertativo-argumentativa do ENEM nas 5 competências oficiais (0–200 cada, 0–1000 total), com nota por competência, justificativa, trechos citados e feedback acionável. Calibra o julgamento com redações reais já corrigidas por humanos do corpus Essay-BR. Use sempre que o usuário pedir pra corrigir/avaliar/dar nota numa redação do ENEM, soltar um texto de redação na pasta redacoes/, perguntar "quanto tiraria nisso", pedir feedback de competência, ou simular correção ENEM. Dispara mesmo sem a palavra "corrigir" — "vê minha redação", "tá boa essa redação?", "qual nota disso" também acionam.
----
-
 # Corretor ENEM — 5 competências
 
 Corretor de redação dissertativo-argumentativa do ENEM. Aplica a rubrica oficial

@@ -1,5 +1,8 @@
 __pycache__/
 *.pyc
+
+# tooling local de agent (pi)
+.pi/
 redacoes/*.txt
 redacoes/*.md
 !redacoes/.gitkeep
