@@ -158,15 +158,17 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      desenvolvimentos suficientes. 920+ só padrão-ouro, sem leitura generosa.
    - **Fronteira 2025:** repertório legítimo, mas abstrato ou transferível, deve
      ser marcado como `fronteira_repertorio_bolso`. Nessa situação, confiança
-     alta é proibida e a faixa de C2 deve comportar leituras oficiais separadas
-     por até 80 pontos. Não escolher sempre o nível menor: explicitar a fronteira.
+     alta é proibida e as faixas de C2 e, quando o repertório estrutura o
+     desenvolvimento, de C3 devem comportar leituras oficiais separadas por até
+     80 pontos. Não escolher sempre o nível menor: explicitar a fronteira.
 
    Se o usuário fornecer uma **nota oficial**, preservá-la como resultado
    administrativo e confrontá-la com a estimativa. Mostrar o erro por competência
    e atualizar a calibração, mas não tratar um único resultado — oficial ou
-   externo — como medida pedagógica sem ruído. Microdados 2025 documentam C2
-   variando de 120 a 200 para o mesmo texto e um caso 600/760/960 decidido em
-   1000 por banca extraordinária.
+   externo — como medida pedagógica sem ruído. Microdados 2025 documentam C2 e
+   C3 variando de 120 a 200 para o mesmo texto e um caso 600/760/960 decidido em
+   1000 por banca extraordinária. Essa banca teve acesso às notas anteriores:
+   decisão final não equivale a quarta correção cega.
 
 7. **Calibrar com exemplos** consultando o banco `corpus.db` (uso normal; NÃO usar durante validação cega):
    ```
@@ -190,6 +192,10 @@ anulação, inserir antes dela o bloco `## Alerta de risco`; não parar a corre�
 **Modo banca (só se pedido explicitamente):** se anulada no gate, emitir apenas
 `Nota: 0 / Motivo / Evidências / O que deveria ter sido feito` — não usar a
 tabela abaixo.
+
+Se o usuário fornecer nota oficial, inserir `## Confronto com nota oficial`
+depois de `## Calibração da central`. Manter resultado oficial e estimativa em
+campos separados.
 
 ```
 # Correção — <tema>
@@ -215,6 +221,11 @@ Soma inicial C1–C5: XXX
 Ajuste aplicado: -XX / +XX / 0
 Motivo do ajuste: <regra de calibrador_total.md + evidência>
 Nota central calibrada: XXX
+
+## Confronto com nota oficial
+<somente se fornecida: nota oficial total e C1–C5; diferença da estimativa por
+competência; quais fronteiras explicam a divergência; o que o caso muda na
+calibração e o que não permite concluir>
 
 ## Diagnóstico principal
 <1–3 frases: maior gargalo de nota + maior força do texto>
@@ -260,7 +271,9 @@ modelo e explicar em 1–2 linhas o que mudou e por que sobe de nível>
 
 ## Calibração
 Comparada com N redações reais do Essay-BR (faixa <x>). Drift pré-2025: <se houve
-divergência por regra 2025, anotar aqui>.
+divergência por regra 2025, anotar aqui>. Variância interavaliador 2025: <se a
+flag `fronteira_repertorio_bolso` foi aplicada, informar leituras plausíveis e a
+evidência necessária para subir/descer C2 e, quando afetada, C3>.
 ```
 
 ## Regras
@@ -273,6 +286,10 @@ divergência por regra 2025, anotar aqui>.
   vácuo.
 - **Adjacência > exatidão.** Acertar a faixa (±80/comp) importa mais que o ponto
   exato; calibrar com exemplos reais reduz viés.
+- **Resultados não independentes.** Várias correções externas podem compartilhar
+  halo de sofisticação; um resultado oficial isolado também contém variância.
+  Pesar evidência textual, regra do ano, corpus e microdados sem escolher só a
+  âncora que confirma a nota desejada.
 - **Repertório:** na dúvida se é real, conferir (`repertorio.md` / `--busca`);
   não tratar invenção como repertório produtivo.
 - Feedback **acionável e priorizado**: o que rende mais ponto primeiro.

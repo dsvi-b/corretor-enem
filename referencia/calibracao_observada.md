@@ -78,9 +78,10 @@ só sobe a 200 se as relações também forem precisas.
 ### Limite dessa âncora
 
 A nota oficial final é dado importante, não verdade pedagógica sem ruído. Os
-microdados 2025 mostraram C2 variando de 120 a 200 para o mesmo texto entre
+microdados 2025 mostraram C2 e C3 variando de 120 a 200 para o mesmo texto entre
 avaliadores oficiais e um caso 600/760/960 encerrado em 1000 por banca
-extraordinária. Portanto, usar o 760 para corrigir inflação conhecida, sem
+extraordinária. A banca viu as notas anteriores; seu 1000 foi adjudicação, não
+quarta leitura cega. Portanto, usar o 760 para corrigir inflação conhecida, sem
 transformá-lo em teto universal para todo texto filosófico.
 
 ## Repertório-teto — "individualismo" trava em C3=160

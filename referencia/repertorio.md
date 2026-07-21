@@ -10,10 +10,46 @@ categorias de tema (ver `temas/lista_temas.md`).
    Se nem no corpus nem no conhecimento geral existe → provável invenção → não
    conta como produtivo (e, na prática 2025, penaliza 2 competências — ver
    `regras_por_ano.md`).
-2. **Sugerir** — oferecer repertório pertinente ao tema do aluno.
+2. **Classificar produtividade** — a referência é diretamente pertinente,
+   explica uma etapa causal e continua necessária depois que o nome do autor é
+   retirado? Se for verdadeira, mas transferível ou ligada só por analogia,
+   marcar `fronteira_repertorio_bolso`.
+3. **Sugerir** — oferecer repertório pertinente ao tema do aluno.
 
-`(corpus: N≥900)` = nº de redações nota ≥900 no `corpus.db` que citam o termo —
-sinal de que é repertório "que funciona". Termos sem marca são curados.
+`(corpus: N≥900)` = nº de redações nota ≥900 no `corpus.db` que citam o termo.
+É sinal de ocorrência em textos fortes pré-2025, **não prova de produtividade no
+texto atual**. Termos sem marca são curados.
+
+## Regra 2025 — repertório de bolso
+
+Aplicar quatro testes separados:
+
+| Teste | Pergunta |
+| --- | --- |
+| Legitimidade | A fonte e o conceito existem? |
+| Pertinência | A referência trata diretamente do recorte? |
+| Produtividade | Ela explica uma etapa do argumento? |
+| Especificidade | O parágrafo sobreviveria com três outros temas trocando poucas palavras? |
+
+Classificação operacional:
+
+- **produtivo:** específico, pertinente e usado para explicar mecanismo;
+- **limítrofe/de bolso:** verdadeiro e contextualizado, mas transferível,
+  analógico ou dispensável para o raciocínio;
+- **genérico:** fonte vaga ou sem conteúdo verificável;
+- **inventado/distorcido:** fonte inexistente ou conceito atribuído sem respaldo.
+
+Microdados 2025 mostraram C2 e C3 variando de 120 a 200 para o mesmo texto entre
+avaliadores oficiais. Documento adicional reportado pelo g1 ligou a avaliação
+negativa do repertório na C2 à C3. Por isso, referência limítrofe exige faixa e
+justificativa; não deve receber 200 automaticamente nem ser tratada como
+invenção. C3 só cai quando a fragilidade também compromete desenvolvimento e
+progressão — não por contágio mecânico.
+
+O caso citado pela matéria mostra limite de qualquer checklist: Mbembe foi
+contextualizado com composição etária do Congresso, políticas públicas e
+geriatria nas UBS, mas ainda recebeu C2=120 de um avaliador e 200 de outros. Um
+mecanismo específico reduz risco; não elimina subjetividade oficial.
 
 ---
 
@@ -29,6 +65,21 @@ sinal de que é repertório "que funciona". Termos sem marca são curados.
 - OMS — dados epidemiológicos, definição de saúde (bem-estar físico/mental/social).
 - Michel Foucault — "biopoder" / "O Nascimento da Clínica" `(corpus: 7)`.
 - Drauzio Varella — divulgação científica (automedicação, saúde pública).
+
+## Envelhecimento
+
+- **Estatuto da Pessoa Idosa (Lei 10.741/2003)** — direitos, autonomia,
+  proteção contra discriminação e dever institucional.
+- **Simone de Beauvoir, “A Velhice”** — construção social da marginalização na
+  velhice; exige ligação a prática concreta, não só menção.
+- **IBGE** — transição demográfica, expectativa de vida e composição etária;
+  citar dado apenas quando houver valor e recorte confiáveis.
+- **OMS — envelhecimento saudável** — capacidade funcional, participação e
+  ambientes favoráveis.
+- **Lei do Sexagenário (1885)** — permite contraste histórico sobre quem teve
+  possibilidade material de envelhecer; explicar contexto escravista.
+- **Obra ou personagem com protagonismo idoso** — usar para analisar
+  representação, autonomia ou estereótipo específico.
 
 ## Segurança
 - Constituição Federal art. 144 — segurança como dever do Estado.
@@ -81,3 +132,7 @@ sinal de que é repertório "que funciona". Termos sem marca são curados.
 - Repertório **genérico**: "estudos mostram", "segundo especialistas", "uma pesquisa".
 - Dado **inventado** ou fonte inexistente.
 - Repertório **só dos textos motivadores** → no máximo nível mediano (120).
+- Referência verdadeira, mas intercambiável entre temas e ligada apenas por
+  “sob esse viés”, “por analogia” ou fórmula ideal × realidade.
+- Autor prestigioso usado para renomear a causa sem agente, prática e
+  consequência observáveis.

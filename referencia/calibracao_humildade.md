@@ -18,8 +18,11 @@ mas **inflação da nota central** e confiança alta mal calibrada.
 Os microdados do Enem 2025 impedem tratar uma correção humana — inclusive uma
 das correções oficiais intermediárias — como verdade pedagógica sem ruído. Em
 um texto cuja banca extraordinária fixou 1000, as etapas anteriores produziram
-600, 760 e 960. Em outros casos nota mil, a C2 do mesmo texto oscilou de 120 a
-200 conforme a classificação do repertório de bolso.
+600, 760 e 960. A banca final viu as notas anteriores e descartou as três
+avaliações individuais; não foi uma quarta leitura cega. Entre as dez notas mil,
+seis foram unânimes já nas duas avaliações iniciais. Em outros casos nota mil,
+C2 e C3 do mesmo texto oscilaram de 120 a 200 conforme a classificação do
+repertório de bolso e sua repercussão no desenvolvimento.
 
 Isso **não torna a banca aleatória** nem autoriza inflar qualquer redação. Muda a
 comunicação da incerteza:
@@ -31,6 +34,12 @@ comunicação da incerteza:
 - texto na fronteira do repertório de bolso nunca recebe confiança alta;
 - um resultado oficial isolado calibra o corretor, mas não deve ser convertido
   automaticamente em regra universal.
+
+Fato observado: distribuição das notas nos microdados. Hipótese reportada:
+capacitação regional desigual e comunicação tardia de regra ligando C2 a C3.
+Profissionais ouvidos pelo g1 apontaram essa causa; o Inep afirmou que os
+parâmetros oficiais foram seguidos. Não transformar hipótese jornalística em
+causalidade demonstrada.
 
 Quando o usuário fornecer a nota oficial, preservar os dois registros: mostrar
 o resultado oficial e explicar onde a estimativa divergiu. Nunca reescrever a

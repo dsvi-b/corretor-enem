@@ -29,7 +29,12 @@ acionam).
    modo → C1–C5 → sanity-check → calibrar central → faixa/confiança → calibrar
    com `corpus.db` → fechar laudo).
 5. **Calibrar com exemplos reais** via `scripts/amostra.py` (banco de 11.147
-   redações reais em `dataset/corpus.db`).
+   redações pré-2025 em `dataset/corpus.db`) e aplicar as ressalvas dos
+   microdados 2025 em `referencia/regras_por_ano.md`.
+6. Se o usuário fornecer **nota oficial**, preservar o resultado, comparar por
+   competência e registrar onde a estimativa errou. Nota oficial é soberana no
+   exame, mas microdados mostram variância interavaliador; não tratá-la como
+   medida pedagógica sem ruído nem descartá-la como mero acaso.
 
 Modo padrão = **treino** (corrige pedagogicamente mesmo com risco de anulação).
 **Modo banca** só quando pedido explicitamente.
@@ -66,7 +71,9 @@ Shims por agent são **gerados** a partir de `CORRETOR.md` por
 
 ENEM altera a prática de correção por edição. **Ano vigente: 2025.** O corpus é
 pré-2025 → calibração com drift (esperar divergência em C2/C4/C5; seguir 2025 e
-anotar). Manutenção: a cada nova edição, baixar a cartilha em
+anotar). Microdados 2025 também documentam C2 e C3 variando de 120 a 200 para o
+mesmo texto conforme a classificação do repertório de bolso e seu impacto no
+desenvolvimento. Manutenção: a cada nova edição, baixar a cartilha em
 `referencia/manuais_inep/` e registrar o diff em `referencia/regras_por_ano.md`.
 
 ## Auto-validação

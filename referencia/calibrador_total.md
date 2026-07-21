@@ -81,14 +81,17 @@ ligação ocorre sobretudo por analogia abstrata, marcar
 - reservar 200 para contribuição direta, específica e explicada;
 - manter faixa de C2 ampla (em geral 120–200) se 120 e 200 forem leituras
   oficiais plausíveis;
-- avaliar C3 separadamente: repertório limítrofe só derruba C3 quando também
-  faltam progressão, exemplos ou causa→efeito;
+- avaliar a prova textual de C3 separadamente, mas aplicar a prática 2025: se o
+  repertório avaliado negativamente ocupa etapa central do desenvolvimento e
+  deixa lacuna de progressão, C3 também pode cair. Se ainda há projeto,
+  exemplos e causa→efeito independentes, não rebaixar C3 por contágio; registrar
+  faixa quando as duas leituras forem plausíveis;
 - em bruto >=800, a flag conta como um item duvidoso da regra 6. Não aplicar
   segundo desconto pelo mesmo motivo.
 
-Microdados 2025 registraram C2=120 e C2=200 para o mesmo texto entre avaliadores
-oficiais. A finalidade da flag é modelar essa fronteira, não escolher sempre a
-nota menor.
+Microdados 2025 registraram C2 e C3 variando de 120 a 200 para o mesmo texto
+entre avaliadores oficiais. A finalidade da flag é modelar essa fronteira, não
+escolher sempre a nota menor.
 
 ## Regras finas por competência (auditoria de extremos)
 

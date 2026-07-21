@@ -2,8 +2,10 @@
 
 Destilado do TG UFPE *"Automated ENEM Essay Scoring and Feedbacks: A
 Prompt-Driven LLM Approach"* (Silva & Araujo, 2024) — texto completo em
-`tg_ufpe_metodologia.txt`. Eles atingiram **100% de concordância adjacente**
-com corretores humanos nas 5 competências usando GPT-4o-mini.
+`tg_ufpe_metodologia.txt`. No experimento reportado, eles atingiram **100% de
+concordância adjacente** com corretores humanos nas 5 competências usando
+GPT-4o-mini. Esse resultado depende da amostra e da referência humana usada; não
+é garantia de exatidão em outra edição, outro corpus ou numa redação individual.
 
 ## Princípio central
 
@@ -73,12 +75,34 @@ python3 scripts/amostra.py --faixa 1000-1000 --n 1
 Comparar a redação sob correção com esses exemplos da mesma faixa. Se a sua
 nota destoar do padrão dos exemplos, revisar.
 
+O corpus é pré-2025 e não basta como única âncora. A calibração atual usa três
+camadas:
+
+1. **rubrica e prática do ano vigente** (`regras_por_ano.md`);
+2. **corpus histórico**, para ordem de grandeza e comparação de desenvolvimento;
+3. **evidência interavaliador 2025**, para modelar fronteiras qualitativas,
+   sobretudo repertório de bolso na C2.
+
+Quando uma referência é legítima, mas abstrata ou transferível, registrar
+`fronteira_repertorio_bolso`: C2 e, se o repertório sustenta o desenvolvimento,
+C3 podem exigir faixa 120–200, não ponto vendido como exato. A nota central
+continua necessária, mas deve vir acompanhada da evidência que faria a
+competência subir ou cair.
+
+Se houver nota oficial conhecida, comparar previsão e resultado por competência.
+Usar o caso para corrigir viés; não ajustar retrospectivamente toda a metodologia
+para reproduzir uma única redação.
+
 ## Notas de fidelidade
 
 - O sistema do TG roda em inglês internamente mas foi escrito/testado em PT.
   Aqui mantemos tudo em PT — é a língua da prova.
 - Concordância adjacente (não exata) é a métrica que importa: acertar a
   **faixa** (±80/competência, ±100 total), não o ponto exato.
+- A própria referência humana possui variância. Microdados 2025 mostraram
+  avaliadores oficiais separando C2 e C3 do mesmo texto por 80 pontos e um caso
+  600/760/960 decidido em 1000 por banca extraordinária. A banca teve acesso às
+  notas anteriores; seu resultado é adjudicação, não quarta leitura cega.
 - A rubrica oficial usa termos subjetivos ("muito bem", "detalhado"). Os
   manuais de correção por competência dão os critérios concretos — por isso a
   cartilha lista os elementos contáveis (sobretudo C5).

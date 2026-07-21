@@ -48,13 +48,15 @@ Documentos obtidos pela imprensa (g1 e outros) indicam correção 2025 mais ríg
 - **C5 (intervenção)** — o elemento **ação** virou praticamente obrigatório:
   sem *ação* explícita, dificilmente passa de **80**; antes a ausência custava
   ~40, agora o impacto chega a ~120. → Priorizar checar *ação* + *agente*.
-- **C2 (repertório)** — repertório **genérico ou mal contextualizado** passou a
-  penalizar **duas** competências (C2 e a relacionada), não só uma. → Repertório
-  solto/decorativo é punido com mais peso.
+- **C2/C3 (repertório e desenvolvimento)** — repertório **genérico ou mal
+  contextualizado** passou a repercutir em **duas** competências: C2 e C3,
+  quando a referência sustenta o desenvolvimento. → Repertório solto/decorativo
+  pode ser punido com mais peso.
 
 **Como aplicar em 2025:** usar os descritores oficiais como base, mas, na dúvida
-entre dois níveis, **puxar pra baixo** em C2/C4/C5 conforme acima; tornar a
-*ação* da proposta condição pra C5 > 80; exigir repertório articulado pra C2 alto.
+entre dois níveis, **puxar pra baixo** em C2/C4/C5 conforme acima e revisar C3
+quando o repertório fraco também deixa lacuna argumentativa; tornar a *ação* da
+proposta condição pra C5 > 80; exigir repertório articulado pra C2 alto.
 
 Fontes: redacaonline.com.br/blog/a-correcao-da-redacao-do-enem-2025-mudou ·
 98fmnatal.com.br (critérios mais rígidos 2025) · g1 (docs aos corretores) ·
@@ -67,13 +69,27 @@ especial na classificação de repertório de bolso:
 
 - entre as 10 redações com nota final 1000, 4 passaram por correções com
   divergência; esse recorte é selecionado pelo resultado final e **não estima a
-  taxa de divergência de todas as redações**;
+  taxa de divergência de todas as redações**; as outras 6 receberam 1000 dos
+  dois avaliadores iniciais, sem terceira ou quarta instância;
 - em um caso, os dois primeiros avaliadores deram 600 e 760, o terceiro deu 960
-  e a banca extraordinária fixou 1000; portanto, não foram dois avaliadores
-  individuais dando 600 e 1000;
+  e a banca extraordinária fixou 1000; essa banca teve acesso às notas anteriores
+  e seu veredito descartou as três avaliações individuais; portanto, não foram
+  dois avaliadores individuais dando 600 e 1000 nem quatro leituras cegas;
 - em redações que terminaram com 1000, a C2 do mesmo texto variou de **120 a
   200** entre avaliadores oficiais, associada à leitura divergente sobre
-  repertório de bolso.
+  repertório de bolso;
+- em dois casos nota mil, a C3 também variou de **120 a 200**. Segundo a matéria,
+  documento adicional enviado por e-mail após os treinamentos determinou que a
+  avaliação negativa do repertório na C2 dialogasse com a C3;
+- até um repertório contextualizado — Mbembe ligado à idade dos parlamentares,
+  políticas públicas e equipes de geriatria nas UBS — recebeu C2=120 de um
+  avaliador e foi aceito como pertinente pela banca final.
+
+**Separar evidência de hipótese:** notas e trajetórias acima vêm dos microdados.
+A explicação por capacitação desigual vem de relatos de participantes da correção
+e especialistas ouvidos pelo g1. Eles afirmaram que orientações presenciais
+teriam variado entre regiões; o Inep respondeu que o processo seguiu rigorosamente
+os parâmetros oficiais. Registrar a controvérsia, não declarar causa provada.
 
 **Como aplicar:** a nota oficial é soberana para seleção e resultado do exame,
 mas não deve ser tratada como medida pedagógica sem ruído. Se o texto usar
@@ -82,8 +98,9 @@ analogia, marcar `fronteira_repertorio_bolso`. Nessa fronteira:
 
 - não conceder C2=200 só pelo prestígio ou pela autenticidade da referência;
 - distinguir pertinência direta, contextualização e contribuição causal;
-- usar faixa de C2 que comporte até 80 pontos de oscilação quando houver duas
-  leituras oficiais plausíveis;
+- usar faixas de C2 e, quando o repertório estrutura o desenvolvimento, de C3
+  que comportem até 80 pontos de oscilação quando houver leituras oficiais
+  plausíveis;
 - não concluir que várias correções coincidentes são independentes: humanos de
   cursinho e IAs podem compartilhar o mesmo halo de sofisticação;
 - não usar o caso extremo para declarar toda correção aleatória.

@@ -2,11 +2,14 @@
 
 **Tema:** Perspectivas acerca do envelhecimento na sociedade brasileira
 **Autor:** Caio Silva Braga (Recife, PE)
-**Nota:** 1000
+**Nota final:** 1000
 Fonte: vestibulares.estrategia.com.
 
-> Exemplo do **ano vigente (2025)** — referência primária pra calibrar sob as
-> regras atuais (ver `regras_por_ano.md`).
+> Exemplo do **ano vigente (2025)** — âncora da decisão final, não prova de
+> unanimidade entre avaliadores. Microdados mostraram que 4 das 10 redações com
+> nota final 1000 tiveram divergências durante a correção. Comparar mecanismos e
+> produtividade, não copiar automaticamente a pontuação (ver
+> `regras_por_ano.md`).
 
 ---
 
@@ -22,7 +25,7 @@ Dessa forma, tendo em vista as múltiplas perspectivas acerca do envelhecimento 
 
 ---
 
-## Análise por competência
+## Leitura que sustenta a nota final
 
 **C1 (200):** Norma controlada; períodos longos bem amarrados.
 
@@ -43,6 +46,20 @@ outro lado", "Sob essa óptica", "Dessa forma"). Coesão "expressiva" (categoria
 idosos), **meio** (iniciativas como o "projeto envelhecer"), **efeito** (resgate
 de independência/autonomia), **detalhamento** (exemplo concreto do projeto). A
 *ação* está explícita — condição que 2025 endureceu pra C5 > 80.
+
+## Por que é uma âncora melhor que repertório filosófico genérico
+
+- *O Karaíba* trata diretamente de pessoas mais velhas e introduz uma
+  perspectiva cultural específica.
+- Lei do Sexagenário sustenta mecanismo histórico concreto: baixa expectativa
+  de vida + liberdade tardia → envelhecer como privilégio.
+- O filme *Vitória* cria contraponto contemporâneo observável: fragilidade
+  esperada × protagonismo idoso.
+- Cada referência executa função diferente; nenhuma depende apenas de analogia
+  entre ideal e realidade.
+
+Mesmo assim, usar como padrão qualitativo, não como promessa de que todo
+avaliador atribuiria 200 em cada competência.
 
 ## Padrões reaproveitáveis
 - Repertório de 3 naturezas (literatura indígena + lei histórica + cinema atual).

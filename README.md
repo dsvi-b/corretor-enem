@@ -1,7 +1,7 @@
 # Corretor de Redação ENEM
 
 Corretor de redação dissertativo-argumentativa do ENEM nas **5 competências
-oficiais** (0–200 cada, 0–1000 total), calibrado contra **11.147 redações reais**
+oficiais** (0–200 cada, 0–1000 total), ancorado em **11.147 redações reais**
 já corrigidas por banca. Roda dentro de qualquer coding agent (Claude Code,
 Codex, Cursor, Gemini, Aider…). **Sem API externa, sem ML.**
 
@@ -9,9 +9,11 @@ A correção segue a metodologia *prompt-driven* de Silva & Araujo (UFPE, 2024) 
 decomposição em sub-análises por competência + chain-of-thought + adesão estrita
 à rubrica INEP — ancorada em um corpus SQLite local.
 
-> ⚠️ **Aviso.** Estimativa pedagógica, não nota oficial. O ENEM é corrigido por
-> dois professores com treinamento próprio; este projeto aproxima a banca a
-> partir de um corpus público. Use para treino, não como previsão contratual.
+> ⚠️ **Aviso.** Estimativa pedagógica, não nota oficial. O ENEM começa com dois
+> avaliadores e pode convocar terceiro avaliador ou banca extraordinária. Os
+> microdados 2025 documentam divergências amplas, sobretudo na C2. Este projeto
+> modela a incerteza; não oferece previsão contratual nem substitui o resultado
+> oficial.
 
 ## Por que usar
 
@@ -79,6 +81,8 @@ de treino. Veja o formato completo em [`CORRETOR.md`](CORRETOR.md).
 6. **Faixa provável + confiança** com travas anti-inflação
    (`referencia/calibracao_humildade.md`).
 7. **Calibração com exemplos reais** via `scripts/amostra.py` sobre o `corpus.db`.
+8. **Confronto com nota oficial**, quando fornecida, sem apagar diferença entre
+   resultado administrativo e estimativa pedagógica.
 
 ## Estrutura
 
@@ -132,8 +136,15 @@ python3 scripts/validar.py score                     # → validacao/relatorio.m
   corretor segue o ano vigente e anota a divergência, mas espere ruído nessas
   competências.
 - **Estimativa, não veredito.** Faixa provável ±100/160/240 conforme confiança.
+- **Variância interavaliador.** Microdados 2025 registraram C2 e C3 variando de
+  120 a 200 para o mesmo texto; um caso passou por 600, 760 e 960 antes de
+  receber 1000 da banca extraordinária, que teve acesso às notas anteriores.
+  Isso exige faixa e humildade, mas não torna toda correção aleatória.
+- **Erros correlacionados.** Várias IAs ou correções de cursinho podem premiar os
+  mesmos sinais superficiais e repetir a mesma inflação.
 - **Repertório.** O agent pode ser enganado por repertório inventado; o fluxo manda
-  conferir em `repertorio.md` ou com `amostra.py --busca`.
+  conferir em `repertorio.md` ou com `amostra.py --busca`. Fonte verdadeira e
+  frequente no corpus ainda pode ser repertório de bolso.
 
 ## Adicionar suporte a outro agent
 
@@ -150,6 +161,8 @@ python3 scripts/validar.py score                     # → validacao/relatorio.m
   `referencia/metodologia_correcao.md`; paper-fonte em
   `referencia/tg_ufpe_metodologia.txt`.
 - Cartilha do Participante INEP (2025) em `referencia/manuais_inep/`.
+- [Microdados do Enem — Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem)
+  e [levantamento do g1 sobre divergências de 2025](https://g1.globo.com/educacao/noticia/2026/06/26/divergencia-notas-redacao-enem-2025.ghtml).
 - Corpus Essay-BR (MIT): [rafaelanchieta/essay](https://github.com/rafaelanchieta/essay)
   e [lplnufpi/essay-br](https://github.com/lplnufpi/essay-br).
 
