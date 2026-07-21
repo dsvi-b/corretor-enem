@@ -65,32 +65,56 @@ agir com consciência.
 **Total oficial:** 760.
 
 O texto de devolutiva da Página do Participante descreve o nível, não informa
-qual passagem levou cada avaliador à decisão. As causas abaixo são inferidas do
-texto, da combinação C2+C3 e da regra de 2025.
+qual passagem levou cada avaliador à decisão. Os microdados, porém, permitem
+recuperar as notas de cada instância. As causas continuam sendo inferidas do
+texto e da regra de 2025: nota por competência não contém justificativa livre.
 
-## Histórico de divergência
+## Trajetória oficial de correção
+
+| Instância | C1 | C2 | C3 | C4 | C5 | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| AV1 | 160 | 200 | 160 | 160 | 160 | 840 |
+| AV2 | 120 | 160 | 160 | 120 | 120 | 680 |
+| AV3 | 160 | 120 | 120 | 160 | 200 | 760 |
+| AV4 — banca de 3 | 160 | 120 | 120 | 160 | 200 | 760 |
+
+A combinação das quatro notas objetivas e da redação foi única entre 4.810.772
+registros; as competências confirmaram a correspondência. Nome, CPF e número de
+inscrição não foram usados.
+
+AV1 e AV2 divergiram 160 pontos, acionando AV3. O terceiro deu 760, exatamente
+80 pontos distante de cada nota inicial. A equidistância levou a AV4, que, pelo
+dicionário oficial, representa banca de três avaliadores. Essa banca confirmou
+integralmente AV3. Houve três correções individuais e uma adjudicação colegiada,
+não quatro leituras individuais cegas.
+
+## Divergência e leitura pedagógica
 
 Correções humanas e por IA do mesmo perfil textual costumaram produzir **840,
-880, 920 e 960**. A diferença não está distribuída igualmente:
+880, 920 e 960**. Agora há comparação oficial direta:
 
-| Competência | Leitura externa comum | Oficial | Inflação típica |
-| --- | ---: | ---: | ---: |
-| C1 | 160 | 160 | 0 |
-| C2 | 160–200 | 120 | 40–80 |
-| C3 | 160–200 | 120 | 40–80 |
-| C4 | 160–200 | 160 | 0–40 |
-| C5 | 200 | 200 | 0 |
+| Competência | Faixa individual oficial | Banca | Leitura útil |
+| --- | ---: | ---: | --- |
+| C1 | 120–160 | 160 | 160 prevaleceu, mas não foi unânime |
+| C2 | 120–200 | 120 | principal fronteira de repertório |
+| C3 | 120–160 | 120 | AV1 e AV2 deram 160; AV3 e banca, 120 |
+| C4 | 120–160 | 160 | maioria em 160, com uma leitura em 120 |
+| C5 | 120–200 | 200 | teto final, após duas leituras iniciais menores |
 
-Isso mostra **halo de sofisticação**: corretor vê filósofos, conectivos, quatro
-parágrafos e proposta completa; depois presume profundidade. A banca severa
-separa aparência formal de produtividade e progressão.
+AV1 reproduziu exatamente a estimativa externa de 840. Isso mostra que 840 era
+uma leitura oficial possível, mas não boa previsão do veredito. O padrão é
+compatível com **halo de sofisticação** — filósofos, conectivos, quatro parágrafos
+e proposta elevando a impressão geral —, porém os microdados não registram a
+motivação do avaliador; tratar halo como diagnóstico pedagógico, não fato causal.
 
-Microdados do Enem 2025 também impedem tratar o 760 como verdade sem ruído. C2 e
-C3 do mesmo texto chegaram a variar de 120 a 200 entre avaliadores oficiais, e
+O 760 continua soberano para o exame porque foi fixado pela banca. Para estudo,
+preservar também a faixa individual real de **680–840**: ela mede a incerteza de
+leitura do mesmo texto. Regra prática: **prever o resultado adjudicado sem apagar
+a variância nem transformar uma nota oficial em teto universal**.
+
+Outros microdados reforçam a cautela: C2 e C3 chegaram a variar de 120 a 200, e
 um caso passou por 600, 760 e 960 antes de receber 1000 da banca extraordinária.
-Essa banca teve acesso às notas anteriores e descartou as avaliações individuais;
-não foi uma quarta leitura cega. A regra prática é dupla: **corrigir a inflação
-sem transformar uma nota oficial isolada em teto universal**.
+Essa banca teve acesso às notas anteriores; não foi uma quarta leitura cega.
 
 A matéria também relata que um documento adicional, enviado depois dos
 treinamentos presenciais, vinculou a avaliação negativa do repertório na C2 à
@@ -121,9 +145,10 @@ escassez de políticas e equipes de geriatria nas UBS. Mesmo concreta, recebeu
 C2=120 de um avaliador e 200 de outros. Portanto, mecanismo específico melhora a
 defesa da nota alta, mas não elimina subjetividade.
 
-## C1 — por que 160
+## C1 — por que a banca fixou 160
 
-Manter expectativa de 160 enquanto estes padrões persistirem:
+AV2 deu 120; AV1, AV3 e banca deram 160. Manter expectativa central de 160,
+reconhecendo risco de 120 enquanto estes padrões persistirem:
 
 | Trecho | Problema | Forma mais precisa |
 | --- | --- | --- |
@@ -137,6 +162,9 @@ Meta: eliminar dois desses padrões por redação. C1=200 vem depois; C2/C3 rend
 mais pontos agora.
 
 ## C2 — por que o repertório não garantiu nota alta
+
+C2 percorreu 200 → 160 → 120 → 120. Portanto, o repertório sustentou teto para
+AV1, mas não resistiu à leitura de AV3 e da banca.
 
 | Repertório | Legitimidade | Risco de 2025 |
 | --- | --- | --- |
@@ -158,6 +186,9 @@ Se a primeira frase não existir, o repertório está ocupando o lugar do
 argumento. C2 deve começar em 120–160, não em 200.
 
 ## C3 — onde a progressão parou
+
+AV1 e AV2 deram 160; AV3 e banca, 120. A estrutura foi reconhecida, mas a
+progressão não convenceu nas instâncias decisivas.
 
 ### Desenvolvimento 1
 
@@ -200,7 +231,8 @@ Se duas frases apenas renomeiam a mesma ideia, C3 permanece em 120–160.
 
 ## C4 — preservar variedade, retirar ornamento
 
-C4=160 já é força. Não aumentar quantidade de conectivos. Melhorar:
+C4=160 prevaleceu em AV1, AV3 e banca; AV2 deu 120. Não aumentar quantidade de
+conectivos. Melhorar:
 
 - reduzir sequência de “tal sistema”, “tal dinâmica”, “tal postura” e “tais
   práticas”;
@@ -210,6 +242,9 @@ C4=160 já é força. Não aumentar quantidade de conectivos. Melhorar:
 - cortar conectivo quando relação lógica ainda não existe.
 
 ## C5 — estrutura aprovada
+
+C5 percorreu 160 → 120 → 200 → 200. Preservar o modelo porque AV3 e banca
+reconheceram o teto, mas tornar cada elemento mais explícito: não houve unanimidade.
 
 Preservar modelo:
 
@@ -224,7 +259,7 @@ Preservar modelo:
 - **detalhamento:** articulação das duas medidas com os eixos discutidos.
 
 Correção necessária apenas na forma: “requer promover” → “deve promover”. Não
-desmontar arquitetura que já recebeu 200.
+desmontar arquitetura que recebeu 200 nas instâncias decisivas.
 
 ## Reescrita-modelo do D1
 
@@ -261,7 +296,8 @@ Sem desmontar estrutura já dominada:
 1. C2 de 120 para 160: uma referência diretamente pertinente ou uma ponte causal
    completa;
 2. C3 de 120 para 160: prática concreta e consequência em cada desenvolvimento;
-3. manter C1=160, C4=160 e C5=200.
+3. defender C1=160, C4=160 e C5=200 com evidências explícitas, sem tratá-las como
+   automáticas.
 
 Essas duas mudanças levam 760 a **840**. Depois, C1 ou C4 em 200 leva a **880**.
 Buscar 920 antes de estabilizar C2/C3 aumenta ornamentação sem atacar gargalo.
@@ -300,5 +336,5 @@ efeitos. Corrija apenas competência institucional e precisão dos verbos.
 - [ ] Cada consequência identifica grupo, direito ou espaço afetado.
 - [ ] Os dois desenvolvimentos não dependem do mesmo exemplo genérico de mídia.
 - [ ] Usei C4=160 como base; não confundi quantidade com função.
-- [ ] Preservei os cinco elementos que já garantiram C5=200.
+- [ ] Explicitei os cinco elementos que sustentaram C5=200 na banca final.
 - [ ] Revisei “tal”, regência e construções verbais imprecisas.

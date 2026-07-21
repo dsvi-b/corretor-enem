@@ -93,6 +93,12 @@ Microdados 2025 registraram C2 e C3 variando de 120 a 200 para o mesmo texto
 entre avaliadores oficiais. A finalidade da flag é modelar essa fronteira, não
 escolher sempre a nota menor.
 
+Âncora pessoal oficial: C2 percorreu 200 → 160 → 120 → 120 e C3,
+160 → 160 → 120 → 120 em AV1, AV2, AV3 e banca. O total individual oscilou entre
+680 e 840; a banca fixou 760. Se o texto se aproximar desse perfil, central em
+760 e faixa que comporte 680–840 são mais defensáveis que um ponto alto sem
+ressalva.
+
 ## Regras finas por competência (auditoria de extremos)
 
 Estas regras corrigem **a soma bruta** ajustando a leitura das competências —

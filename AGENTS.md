@@ -34,7 +34,9 @@ acionam).
 6. Se o usuário fornecer **nota oficial**, preservar o resultado, comparar por
    competência e registrar onde a estimativa errou. Nota oficial é soberana no
    exame, mas microdados mostram variância interavaliador; não tratá-la como
-   medida pedagógica sem ruído nem descartá-la como mero acaso.
+   medida pedagógica sem ruído nem descartá-la como mero acaso. Se houver
+   trajetória AV1–AV4, mostrar cada instância; AV4 é banca de três avaliadores,
+   não quarto corretor individual.
 
 Modo padrão = **treino** (corrige pedagogicamente mesmo com risco de anulação).
 **Modo banca** só quando pedido explicitamente.

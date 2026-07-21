@@ -84,6 +84,14 @@ especial na classificação de repertório de bolso:
 - até um repertório contextualizado — Mbembe ligado à idade dos parlamentares,
   políticas públicas e equipes de geriatria nas UBS — recebeu C2=120 de um
   avaliador e foi aceito como pertinente pela banca final.
+- na âncora pessoal oficial deste projeto, o registro anonimizado foi localizado
+  por uma combinação única das notas entre 4.810.772 linhas. A trajetória foi:
+  AV1=840 (160/200/160/160/160), AV2=680 (120/160/160/120/120), AV3=760
+  (160/120/120/160/200) e AV4=760, com as mesmas competências de AV3. A diferença
+  inicial de 160 acionou AV3; como 760 ficou equidistante das notas iniciais, a
+  redação chegou a AV4. Pelo dicionário oficial, AV4 é nota atribuída por banca
+  de três avaliadores, não por um quarto corretor individual. Nesse mesmo texto,
+  C2 e C5 oscilaram de 120 a 200; os totais individuais, de 680 a 840.
 
 **Separar evidência de hipótese:** notas e trajetórias acima vêm dos microdados.
 A explicação por capacitação desigual vem de relatos de participantes da correção
@@ -101,6 +109,9 @@ analogia, marcar `fronteira_repertorio_bolso`. Nessa fronteira:
 - usar faixas de C2 e, quando o repertório estrutura o desenvolvimento, de C3
   que comportem até 80 pontos de oscilação quando houver leituras oficiais
   plausíveis;
+- se a trajetória AV1–AV4 estiver disponível, mostrar separadamente notas
+  individuais e veredito da banca; usar a primeira para calibrar a incerteza e o
+  segundo como resultado administrativo, sem fingir que são medições equivalentes;
 - não concluir que várias correções coincidentes são independentes: humanos de
   cursinho e IAs podem compartilhar o mesmo halo de sofisticação;
 - não usar o caso extremo para declarar toda correção aleatória.

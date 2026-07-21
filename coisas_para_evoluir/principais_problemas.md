@@ -20,35 +20,38 @@ progresso.
 | Argumentação | Conceitos sofisticados sem mecanismo concreto suficiente | C3 pode ficar em 120 mesmo com estrutura formal | Muito alta |
 | Repertório | Referências legítimas, mas algumas conexões parecem adaptadas ao tema | C2 pode variar de 120 a 200 conforme a produtividade reconhecida | Muito alta |
 | Projeto de texto | Tese anuncia eixos mais amplos do que os parágrafos demonstram | C3 perde consistência | Muito alta |
-| Intervenção | Proposta dupla com agentes, meios e efeitos claros | C5 chegou a 200 e deve ser preservada | Média |
+| Intervenção | Proposta dupla com agentes, meios e efeitos claros | Banca fixou C5=200, mas corretores individuais variaram de 120 a 200 | Média |
 | Recorte temático | Um subgrupo ou aspecto passa a representar o tema inteiro | C2 perde abrangência | Alta |
-| Norma padrão | Poucos erros claros de concordância, grafia e regência | C1 tende a 160 | Média |
-| Coesão | Boa variedade, com risco de conectivos artificiais ou repetidos | C4=160 é a base observada; 200 exige relações precisas | Média |
+| Norma padrão | Poucos erros claros de concordância, grafia e regência | C1 tende a 160, com leitura oficial também em 120 | Média |
+| Coesão | Boa variedade, com risco de conectivos artificiais ou repetidos | C4 tende a 160, com leitura oficial também em 120 | Média |
 
 ### Âncora oficial: Enem 2025
 
 Histórico de correções externas do mesmo perfil textual: **840, 880, 920 e
-960**. Resultado oficial da redação sobre envelhecimento: **760**.
+960**. Resultado final da banca: **760**. Trajetória oficial:
 
-| Competência | Nota oficial | Leitura do histórico |
-| --- | ---: | --- |
-| C1 | 160 | resultado estável: bom domínio, com poucos desvios |
-| C2 | 120 | principal fonte de inflação; repertório real foi lido como pouco produtivo ou pouco pertinente |
-| C3 | 120 | estrutura visível não compensou falta de progressão e mecanismo concreto |
-| C4 | 160 | variedade confirmada, mas uso não foi considerado expressivo |
-| C5 | 200 | força estável: proposta dupla completa e articulada |
+| Instância | C1 | C2 | C3 | C4 | C5 | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| AV1 | 160 | 200 | 160 | 160 | 160 | 840 |
+| AV2 | 120 | 160 | 160 | 120 | 120 | 680 |
+| AV3 | 160 | 120 | 120 | 160 | 200 | 760 |
+| AV4 — banca de 3 | 160 | 120 | 120 | 160 | 200 | 760 |
 
-O 760 é o resultado administrativo soberano, mas não deve virar teto automático.
-Microdados 2025 registraram C2 e C3 variando de 120 a 200 para o mesmo texto
-entre avaliadores oficiais e um caso com 600, 760 e 960 encerrado em 1000 por
-banca extraordinária. Essa banca viu as notas anteriores; não foi quarta leitura
-cega. Entre as dez notas finais 1000, seis foram unânimes nas duas avaliações
-iniciais. Para estudar:
+AV1 e AV2 divergiram 160 pontos. AV3 ficou equidistante, 80 pontos de cada, e
+acionou AV4. A banca confirmou AV3 em todas as competências. Logo, o 760 é o
+resultado administrativo soberano, mas não leitura individual unânime. O mesmo
+texto recebeu totais individuais de 680 a 840; C2 e C5 variaram de 120 a 200.
 
-- use **760 como âncora severa real**;
+Isso muda a interpretação do histórico: 840 não foi só inflação externa — foi a
+nota de AV1 —, mas continuou sendo previsão alta demais para o veredito. Para
+estudar:
+
+- use **760 como âncora do resultado adjudicado**;
+- use **680–840 como faixa empírica desta redação**, não faixa universal;
 - use faixa pedagógica quando houver fronteira qualitativa;
 - não trate várias correções de IA ou cursinho como medições independentes;
-- não use a variância oficial para ignorar falhas comprovadas de C2 e C3.
+- não use a variância oficial para ignorar fragilidades de C2 e C3 reconhecidas
+  por AV3 e pela banca.
 
 ### Régua pessoal de correção
 
@@ -61,7 +64,8 @@ Ao corrigir texto com filosofia abstrata e estrutura pronta:
    consequência e progressão;
 4. use C4=160 como base quando houver diversidade, mas também retomadas vagas ou
    conectivos protocolares;
-5. preserve C5=200 quando os cinco elementos continuarem explícitos.
+5. defenda C5=200 tornando explícitos os cinco elementos; o teto foi validado
+   pela banca, mas não pelos dois primeiros corretores.
 
 ## 1. Transformar abstração em argumento
 

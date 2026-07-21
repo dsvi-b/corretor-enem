@@ -139,7 +139,9 @@ python3 scripts/validar.py score                     # → validacao/relatorio.m
 - **Variância interavaliador.** Microdados 2025 registraram C2 e C3 variando de
   120 a 200 para o mesmo texto; um caso passou por 600, 760 e 960 antes de
   receber 1000 da banca extraordinária, que teve acesso às notas anteriores.
-  Isso exige faixa e humildade, mas não torna toda correção aleatória.
+  Na âncora pessoal oficial, AV1=840, AV2=680, AV3=760 e a banca de três
+  avaliadores fixou 760; C2 e C5 variaram de 120 a 200. Isso exige faixa e
+  humildade, mas não torna toda correção aleatória.
 - **Erros correlacionados.** Várias IAs ou correções de cursinho podem premiar os
   mesmos sinais superficiais e repetir a mesma inflação.
 - **Repertório.** O agent pode ser enganado por repertório inventado; o fluxo manda

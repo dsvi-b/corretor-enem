@@ -44,8 +44,22 @@ referenciação / conclusão / causal). **4+ tipos em texto organizado → 160.*
 
 ## Caso oficial ENEM 2025 — filosofia abstrata + proposta dupla
 
-**Resultado oficial informado pelo participante:** C1=160, C2=120, C3=120,
-C4=160, C5=200; total 760.
+**Resultado final da banca:** C1=160, C2=120, C3=120, C4=160, C5=200; total 760.
+
+**Trajetória oficial recuperada nos microdados:**
+
+| Instância | C1 | C2 | C3 | C4 | C5 | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| AV1 | 160 | 200 | 160 | 160 | 160 | 840 |
+| AV2 | 120 | 160 | 160 | 120 | 120 | 680 |
+| AV3 | 160 | 120 | 120 | 160 | 200 | 760 |
+| AV4 — banca de 3 | 160 | 120 | 120 | 160 | 200 | 760 |
+
+O registro anonimizado foi identificado por combinação única das notas entre
+4.810.772 linhas. A diferença inicial de 160 acionou AV3. Sua nota ficou 80
+pontos distante de AV1 e AV2; a equidistância levou a AV4. A banca confirmou
+integralmente AV3. Portanto, houve três correções individuais e uma adjudicação
+colegiada, não quatro leituras individuais independentes.
 
 **Perfil do texto:** introdução com *Bhagavad Gita*, D1 com Nietzsche, D2 com
 Foucault, vocabulário formal, muitos conectivos e duas propostas de intervenção
@@ -54,35 +68,38 @@ mas explica pouco os mecanismos materiais do idadismo.
 
 ### Lições por competência
 
-- **C1=160:** linguagem sofisticada não elimina impropriedades lexicais e
-  construções como "requer promover"; também não se deve sobre-penalizar estilo.
-- **C2=120:** fonte legítima não garante produtividade. Gita, moral do
-  ressentimento e regime de verdade podem formar repertório de bolso quando a
-  ligação ao envelhecimento depende de analogia ampla e substitui explicação
-  específica.
-- **C3=120:** quatro parágrafos e tese bifurcada não garantem progressão. Termos
-  como "validação existencial", "mortificação" e "transvaloração ética" não
-  substituem agente → prática → consequência concreta.
-- **C4=160:** diversidade e constância de conectivos sustentam nível alto, mas
-  retomadas repetidas com "tal" e relações lógicas artificiais impedem tratar
-  automaticamente o uso como expressivo.
-- **C5=200:** duas propostas com agentes nomeados, meios próprios, efeitos e
-  articulação à tese podem atingir 200 mesmo com detalhamento relativamente
-  abstrato. Não exigir especificidade ultraoperacional além da rubrica.
+- **C1 final 160; faixa individual 120–160:** linguagem sofisticada não elimina
+  impropriedades lexicais e construções como "requer promover"; também não se
+  deve sobre-penalizar estilo.
+- **C2 final 120; faixa individual 120–200:** esta é a principal fronteira. Gita,
+  moral do ressentimento e regime de verdade foram aceitos como produtivos por
+  AV1 e rebaixados por AV3 e banca. Fonte legítima não garante produtividade;
+  ligação por analogia ampla continua arriscada.
+- **C3 final 120; faixa individual 120–160:** AV1 e AV2 reconheceram 160, mas AV3
+  e banca deram 120. Quatro parágrafos e tese bifurcada não garantem progressão;
+  termos abstratos não substituem agente → prática → consequência concreta.
+- **C4 final 160; faixa individual 120–160:** diversidade e constância sustentam
+  160 na maioria das instâncias, mas retomadas vagas e relações artificiais ainda
+  permitem leitura em 120.
+- **C5 final 200; faixa individual 120–200:** AV1 deu 160 e AV2, 120; AV3 e banca
+  reconheceram 200. A proposta deve ser preservada porque recebeu o teto no
+  veredito final, não porque tenha sido unanimemente considerada completa.
 
 **Regra de calibração:** texto com repertório prestigioso, estrutura pronta e
 proposta completa, mas sem exemplos ou cadeia causal concreta, deve começar com
 C2/C3 em 120–160, não em 200. C4 começa em 160 quando há diversidade funcional;
-só sobe a 200 se as relações também forem precisas.
+só sobe a 200 se as relações também forem precisas. C5 pode ser mantida em 200
+quando os cinco elementos estão demonstráveis, mas a justificativa deve apontar
+cada elemento: a trajetória 120–200 proíbe tratá-la como força automática.
 
 ### Limite dessa âncora
 
-A nota oficial final é dado importante, não verdade pedagógica sem ruído. Os
-microdados 2025 mostraram C2 e C3 variando de 120 a 200 para o mesmo texto entre
-avaliadores oficiais e um caso 600/760/960 encerrado em 1000 por banca
-extraordinária. A banca viu as notas anteriores; seu 1000 foi adjudicação, não
-quarta leitura cega. Portanto, usar o 760 para corrigir inflação conhecida, sem
-transformá-lo em teto universal para todo texto filosófico.
+A nota final de 760 é dado administrativo soberano, não leitura individual
+unânime: o mesmo texto recebeu 680, 760 e 840 de corretores oficiais. AV1 mostra
+que 840 era uma leitura possível; AV3 e banca mostram que não era boa previsão do
+veredito. Usar 760 para corrigir inflação conhecida, preservar 680–840 como faixa
+empírica deste texto e não transformar nenhum ponto dessa faixa em teto universal
+para toda redação filosófica.
 
 ## Repertório-teto — "individualismo" trava em C3=160
 

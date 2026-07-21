@@ -24,6 +24,13 @@ seis foram unânimes já nas duas avaliações iniciais. Em outros casos nota mi
 C2 e C3 do mesmo texto oscilaram de 120 a 200 conforme a classificação do
 repertório de bolso e sua repercussão no desenvolvimento.
 
+A âncora pessoal oficial reforça isso fora do recorte das notas mil: AV1=840,
+AV2=680, AV3=760 e banca=760. O primeiro avaliador deu C2=200; terceiro e banca,
+C2=120. Em C5, as quatro instâncias deram 160, 120, 200 e 200. Logo, o 760 é o
+veredito administrativo da banca, enquanto 680–840 é a faixa de leituras
+individuais efetivamente observada para o mesmo texto. Uma estimativa de 840 não
+era impossível — coincidiu com AV1 —, mas superestimava o resultado adjudicado.
+
 Isso **não torna a banca aleatória** nem autoriza inflar qualquer redação. Muda a
 comunicação da incerteza:
 
@@ -34,6 +41,8 @@ comunicação da incerteza:
 - texto na fronteira do repertório de bolso nunca recebe confiança alta;
 - um resultado oficial isolado calibra o corretor, mas não deve ser convertido
   automaticamente em regra universal.
+- quando houver AV1–AV4, não resumir a trajetória à nota final: registrar a
+  dispersão por competência e lembrar que AV4 representa banca de três membros.
 
 Fato observado: distribuição das notas nos microdados. Hipótese reportada:
 capacitação regional desigual e comunicação tardia de regra ligando C2 a C3.

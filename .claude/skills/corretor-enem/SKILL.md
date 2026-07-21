@@ -171,10 +171,17 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    Se o usuário fornecer uma **nota oficial**, preservá-la como resultado
    administrativo e confrontá-la com a estimativa. Mostrar o erro por competência
    e atualizar a calibração, mas não tratar um único resultado — oficial ou
-   externo — como medida pedagógica sem ruído. Microdados 2025 documentam C2 e
-   C3 variando de 120 a 200 para o mesmo texto e um caso 600/760/960 decidido em
-   1000 por banca extraordinária. Essa banca teve acesso às notas anteriores:
-   decisão final não equivale a quarta correção cega.
+   externo — como medida pedagógica sem ruído. Se os microdados permitirem
+   recuperar a trajetória individual, separar AV1, AV2, eventual AV3 e AV4: no
+   dicionário 2025, AV4 é o veredito de uma **banca de três avaliadores**, não um
+   quarto corretor individual. A nota final da banca é soberana no exame; as
+   notas intermediárias medem a faixa de leitura oficial do mesmo texto.
+
+   Microdados 2025 documentam C2 e C3 variando de 120 a 200 e um caso
+   600/760/960 decidido em 1000. A âncora pessoal oficial deste projeto teve
+   AV1=840, AV2=680, AV3=760 e banca=760; C2 variou 120–200 e C5, 120–200. As
+   bancas tiveram acesso às notas anteriores: decisão final não equivale a nova
+   correção cega nem apaga a variância intermediária.
 
 7. **Calibrar com exemplos** consultando o banco `corpus.db` (uso normal; NÃO usar durante validação cega):
    ```
@@ -230,8 +237,9 @@ Nota central calibrada: XXX
 
 ## Confronto com nota oficial
 <somente se fornecida: nota oficial total e C1–C5; diferença da estimativa por
-competência; quais fronteiras explicam a divergência; o que o caso muda na
-calibração e o que não permite concluir>
+competência; trajetória AV1–AV4, se conhecida, deixando claro que AV4 é banca;
+faixa oficial observada; quais fronteiras explicam a divergência; o que o caso
+muda na calibração e o que não permite concluir>
 
 ## Diagnóstico principal
 <1–3 frases: maior gargalo de nota + maior força do texto>
