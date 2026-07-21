@@ -42,25 +42,46 @@ variedade de funções coesivas.
 referenciação / conclusão / causal). **4+ tipos em texto organizado → 160.** Só
 120 se predomina 1 tipo ou os encadeamentos são vazios.
 
-## C5 — subestimar proposta dupla articulada
+## Caso oficial ENEM 2025 — filosofia abstrata + proposta dupla
 
-**Tendência:** exigir detalhamento ultra-específico para C5=200 e baixar para 120
-propostas que são, no conjunto, muito bem elaboradas.
+**Resultado oficial informado pelo participante:** C1=160, C2=120, C3=120,
+C4=160, C5=200; total 760.
 
-**Exemplo real (nota banca 200 na C5):** dois agentes nomeados (União +
-Secretaria de Comunicação Social); estados/municípios e redes sociais como meios;
-dois efeitos distintos; fecho que retoma a tese inicial. O corretor deu 120 por
-detalhamento "abstrato". A banca deu 200 ("muito bem elaborada").
+**Perfil do texto:** introdução com *Bhagavad Gita*, D1 com Nietzsche, D2 com
+Foucault, vocabulário formal, muitos conectivos e duas propostas de intervenção
+(União + Secretaria de Comunicação Social). O texto tem arquitetura visível,
+mas explica pouco os mecanismos materiais do idadismo.
 
-**Regra:** duas propostas com agente específico + meio + efeito + articulação à
-tese = 200 possível, mesmo com detalhamento relativamente abstrato. A articulação
-à discussão conta muito.
+### Lições por competência
 
-**Como aplicar:** NÃO exigir detalhamento ultra-específico para C5=200 se:
-(a) há dois agentes nomeados; (b) cada proposta tem meio próprio; (c) os efeitos
-estão explícitos; (d) a proposta está articulada à argumentação do texto.
-Detalhamento abstrato não derruba de 200 para 120 automaticamente — avaliar o
-conjunto.
+- **C1=160:** linguagem sofisticada não elimina impropriedades lexicais e
+  construções como "requer promover"; também não se deve sobre-penalizar estilo.
+- **C2=120:** fonte legítima não garante produtividade. Gita, moral do
+  ressentimento e regime de verdade podem formar repertório de bolso quando a
+  ligação ao envelhecimento depende de analogia ampla e substitui explicação
+  específica.
+- **C3=120:** quatro parágrafos e tese bifurcada não garantem progressão. Termos
+  como "validação existencial", "mortificação" e "transvaloração ética" não
+  substituem agente → prática → consequência concreta.
+- **C4=160:** diversidade e constância de conectivos sustentam nível alto, mas
+  retomadas repetidas com "tal" e relações lógicas artificiais impedem tratar
+  automaticamente o uso como expressivo.
+- **C5=200:** duas propostas com agentes nomeados, meios próprios, efeitos e
+  articulação à tese podem atingir 200 mesmo com detalhamento relativamente
+  abstrato. Não exigir especificidade ultraoperacional além da rubrica.
+
+**Regra de calibração:** texto com repertório prestigioso, estrutura pronta e
+proposta completa, mas sem exemplos ou cadeia causal concreta, deve começar com
+C2/C3 em 120–160, não em 200. C4 começa em 160 quando há diversidade funcional;
+só sobe a 200 se as relações também forem precisas.
+
+### Limite dessa âncora
+
+A nota oficial final é dado importante, não verdade pedagógica sem ruído. Os
+microdados 2025 mostraram C2 variando de 120 a 200 para o mesmo texto entre
+avaliadores oficiais e um caso 600/760/960 encerrado em 1000 por banca
+extraordinária. Portanto, usar o 760 para corrigir inflação conhecida, sem
+transformá-lo em teto universal para todo texto filosófico.
 
 ## Repertório-teto — "individualismo" trava em C3=160
 

@@ -11,8 +11,8 @@ central sem mexer muito nas competências.
 
 1. Calcular `nota_bruta = C1+C2+C3+C4+C5`.
 2. Checar flags: texto_curto, paragrafo_unico, repertorio_generico,
-   proposta_incompleta, argumentacao_generica, coesao_basica, c1_recorrente,
-   central_800_mais, risco_superestimacao.
+   fronteira_repertorio_bolso, proposta_incompleta, argumentacao_generica,
+   coesao_basica, c1_recorrente, central_800_mais, risco_superestimacao.
 3. Aplicar ajustes abaixo (somar no máximo 2 ajustes principais; evitar
    overfitting). Arredondar para múltiplo de 40.
 4. Exibir:
@@ -68,6 +68,28 @@ Se `nota_bruta <= 520`, mas o texto tem tese clara, 2 argumentos reconhecíveis 
 proposta com pelo menos 3 elementos, pode aumentar **+40**. Não subir acima de
 600 sem repertório produtivo.
 
+### 9) Fronteira de repertório de bolso (2025)
+
+Se a referência é real, mas poderia ser transplantada para muitos temas e sua
+ligação ocorre sobretudo por analogia abstrata, marcar
+`fronteira_repertorio_bolso`.
+
+- autenticidade não basta para C2=200;
+- usar C2=120 quando a referência apenas acompanha afirmação previsível ou
+  força pertinência; usar 160 quando há contextualização e função reconhecível,
+  mas o mecanismo ainda é incompleto;
+- reservar 200 para contribuição direta, específica e explicada;
+- manter faixa de C2 ampla (em geral 120–200) se 120 e 200 forem leituras
+  oficiais plausíveis;
+- avaliar C3 separadamente: repertório limítrofe só derruba C3 quando também
+  faltam progressão, exemplos ou causa→efeito;
+- em bruto >=800, a flag conta como um item duvidoso da regra 6. Não aplicar
+  segundo desconto pelo mesmo motivo.
+
+Microdados 2025 registraram C2=120 e C2=200 para o mesmo texto entre avaliadores
+oficiais. A finalidade da flag é modelar essa fronteira, não escolher sempre a
+nota menor.
+
 ## Regras finas por competência (auditoria de extremos)
 
 Estas regras corrigem **a soma bruta** ajustando a leitura das competências —
@@ -122,6 +144,9 @@ de corpus"** no laudo. **Para uso ENEM atual, seguir a cartilha 2025**: sem
 - `paragrafo_unico`: texto em bloco único ou quase único.
 - `repertorio_generico`: "segundo pesquisas", citação sem fonte, filósofo usado
   sem conexão material.
+- `fronteira_repertorio_bolso`: fonte legítima e contextualizada, mas
+  transferível, abstrata ou ligada ao tema por analogia cuja produtividade
+  admite leituras oficiais muito diferentes.
 - `proposta_incompleta`: faltam meio/efeito/detalhamento ou agente vago.
 - `argumentacao_generica`: só afirma problema, sem explicar causa/consequência.
 - `coesao_basica`: conectivos simples/repetidos, pouco encadeamento real.

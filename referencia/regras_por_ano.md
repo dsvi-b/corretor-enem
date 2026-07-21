@@ -1,6 +1,6 @@
 # Regras de correção por ano
 
-**Ano vigente: 2025.** Última verificação: 2026-06-18.
+**Ano vigente: 2025.** Última verificação: 2026-07-21.
 
 A estrutura (5 competências, 0–200 cada, dissertativo-argumentativo) é estável.
 O que muda é a **prática de correção** — às vezes sem alterar o texto oficial da
@@ -59,6 +59,37 @@ entre dois níveis, **puxar pra baixo** em C2/C4/C5 conforme acima; tornar a
 Fontes: redacaonline.com.br/blog/a-correcao-da-redacao-do-enem-2025-mudou ·
 98fmnatal.com.br (critérios mais rígidos 2025) · g1 (docs aos corretores) ·
 cartilha oficial INEP 2025.
+
+### Evidência dos microdados 2025 (divulgados em junho de 2026)
+
+Os microdados oficiais confirmaram **variância interavaliador relevante**, em
+especial na classificação de repertório de bolso:
+
+- entre as 10 redações com nota final 1000, 4 passaram por correções com
+  divergência; esse recorte é selecionado pelo resultado final e **não estima a
+  taxa de divergência de todas as redações**;
+- em um caso, os dois primeiros avaliadores deram 600 e 760, o terceiro deu 960
+  e a banca extraordinária fixou 1000; portanto, não foram dois avaliadores
+  individuais dando 600 e 1000;
+- em redações que terminaram com 1000, a C2 do mesmo texto variou de **120 a
+  200** entre avaliadores oficiais, associada à leitura divergente sobre
+  repertório de bolso.
+
+**Como aplicar:** a nota oficial é soberana para seleção e resultado do exame,
+mas não deve ser tratada como medida pedagógica sem ruído. Se o texto usar
+repertório legítimo, porém abstrato, transferível ou ligado ao tema apenas por
+analogia, marcar `fronteira_repertorio_bolso`. Nessa fronteira:
+
+- não conceder C2=200 só pelo prestígio ou pela autenticidade da referência;
+- distinguir pertinência direta, contextualização e contribuição causal;
+- usar faixa de C2 que comporte até 80 pontos de oscilação quando houver duas
+  leituras oficiais plausíveis;
+- não concluir que várias correções coincidentes são independentes: humanos de
+  cursinho e IAs podem compartilhar o mesmo halo de sofisticação;
+- não usar o caso extremo para declarar toda correção aleatória.
+
+Fontes: [microdados do Enem — Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem) ·
+[levantamento do g1, 26/06/2026](https://g1.globo.com/educacao/noticia/2026/06/26/divergencia-notas-redacao-enem-2025.ghtml).
 
 ---
 

@@ -22,7 +22,7 @@ em `scripts/`. Sem API externa, sem ML.
 - `referencia/calibracao_humildade.md` — travas anti-inflação, confiança alta rara, faixas prováveis; consultar antes de fechar central/faixa/confiança.
 - `referencia/calibrador_total.md` — regras empíricas para ajustar a **nota central** a partir da soma bruta C1–C5 e flags do texto.
 - `referencia/auditoria_extremos.md` — auditoria dos erros extremos: por que o corretor infla texto rebuscado vazio (creditar C3/C4 por forma) e deflaciona argumento forte/proposta fraca (halo reverso + drift de C5). Consultar antes de fechar a calibração.
-- `referencia/calibracao_observada.md` — achados empíricos de calibração (onde o corretor erra sistematicamente: C1 severo em estilo, C4 derruba com F6, C5 subestima proposta dupla; repertório-teto). Ler antes de fechar.
+- `referencia/calibracao_observada.md` — achados empíricos de calibração (C1 severo em estilo, halo filosófico em C2/C3, C4 protocolar, proposta dupla e variância interavaliador 2025). Ler antes de fechar.
 - `referencia/redacoes_nota_1000/` — exemplos comentados (2021–2025) como padrão-ouro.
 - `dataset/corpus.db` — **banco SQLite com 11.147 redações reais** já corrigidas por humanos (Essay-BR base + extended), com nota por competência e índice full-text. Memória empírica de calibração (pré-2025 — ver drift).
 - `scripts/amostra.py` — consulta o `corpus.db` (faixa, nível, tema, busca full-text, `--escala`).
@@ -123,8 +123,9 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
    por C5 fraca; não creditar C3/C4 por forma/conectivo; marcar drift de C5 do
    corpus) e `referencia/calibracao_observada.md` (erros sistemáticos conhecidos),
    marcar as flags aplicáveis (texto_curto, paragrafo_unico,
-   repertorio_generico, proposta_incompleta, argumentacao_generica, coesao_basica,
-   c1_recorrente, risco_superestimacao) e aplicar ajuste empírico (-XX/+XX/0). Exibir no laudo:
+   repertorio_generico, fronteira_repertorio_bolso, proposta_incompleta,
+   argumentacao_generica, coesao_basica, c1_recorrente, risco_superestimacao) e
+   aplicar ajuste empírico (-XX/+XX/0). Exibir no laudo:
    `Nota bruta`, `Calibração da central`, `ajuste aplicado`, `motivo` e `nota
    central calibrada`. A nota exibida no topo é a **central calibrada**.
 
@@ -155,6 +156,17 @@ Se `dataset/corpus.db` não existir, gerar com `python3 scripts/build_db.py`.
      Para 800+, exigir repertório produtivo, C3 consistente e C5 não genérica. Para
      880+, exigir C5 completa operacional, C1 forte, C4 funcional, dois
      desenvolvimentos suficientes. 920+ só padrão-ouro, sem leitura generosa.
+   - **Fronteira 2025:** repertório legítimo, mas abstrato ou transferível, deve
+     ser marcado como `fronteira_repertorio_bolso`. Nessa situação, confiança
+     alta é proibida e a faixa de C2 deve comportar leituras oficiais separadas
+     por até 80 pontos. Não escolher sempre o nível menor: explicitar a fronteira.
+
+   Se o usuário fornecer uma **nota oficial**, preservá-la como resultado
+   administrativo e confrontá-la com a estimativa. Mostrar o erro por competência
+   e atualizar a calibração, mas não tratar um único resultado — oficial ou
+   externo — como medida pedagógica sem ruído. Microdados 2025 documentam C2
+   variando de 120 a 200 para o mesmo texto e um caso 600/760/960 decidido em
+   1000 por banca extraordinária.
 
 7. **Calibrar com exemplos** consultando o banco `corpus.db` (uso normal; NÃO usar durante validação cega):
    ```

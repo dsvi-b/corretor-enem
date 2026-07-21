@@ -13,6 +13,29 @@ mas **inflação da nota central** e confiança alta mal calibrada.
 - Proposta existente → C5 inflada, mesmo quando era genérica ou pouco operacional.
 - Boa tese inicial → contaminou C1/C4/C5 (efeito halo).
 
+## Variância interavaliador observada em 2025
+
+Os microdados do Enem 2025 impedem tratar uma correção humana — inclusive uma
+das correções oficiais intermediárias — como verdade pedagógica sem ruído. Em
+um texto cuja banca extraordinária fixou 1000, as etapas anteriores produziram
+600, 760 e 960. Em outros casos nota mil, a C2 do mesmo texto oscilou de 120 a
+200 conforme a classificação do repertório de bolso.
+
+Isso **não torna a banca aleatória** nem autoriza inflar qualquer redação. Muda a
+comunicação da incerteza:
+
+- nota oficial = resultado administrativo soberano;
+- estimativa pedagógica = leitura argumentada, com faixa e possíveis fronteiras;
+- várias correções externas podem ter erro correlacionado e não equivalem a
+  várias medições independentes;
+- texto na fronteira do repertório de bolso nunca recebe confiança alta;
+- um resultado oficial isolado calibra o corretor, mas não deve ser convertido
+  automaticamente em regra universal.
+
+Quando o usuário fornecer a nota oficial, preservar os dois registros: mostrar
+o resultado oficial e explicar onde a estimativa divergiu. Nunca reescrever a
+nota oficial como se fosse apenas outra previsão.
+
 ## Exemplos da validação seed=4
 
 - **96** — humano 200, central 760. Estrutura e repertório fizeram inflar muito;
@@ -90,6 +113,7 @@ Confiança padrão = **média**.
 - estrutura ENEM nítida;
 - C1 sem padrão recorrente de erro;
 - C2 com repertório legítimo, pertinente e produtivo;
+- nenhuma referência depende de classificação limítrofe como repertório de bolso;
 - C3 com projeto de texto claro, progressão e desenvolvimento consistente;
 - C4 com coesão variada e funcional;
 - C5 com ação, agente, meio/modo, efeito e detalhamento claros;
@@ -105,6 +129,9 @@ Se faltar qualquer item: **não usar alta**.
 - baixa: ±240 pontos.
 
 A faixa deve tentar capturar a nota humana, não parecer precisa.
+O caso extremo 600→1000 justifica humildade, não uma faixa de 400 pontos para
+todo texto. Ampliar a incerteza apenas quando houver evidência concreta de
+fronteira qualitativa, sobretudo em C2/C3.
 
 ## Sinais de “parece boa, mas a banca pode punir”
 
